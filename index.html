@@ -163,7 +163,7 @@
 
         
         <a href="/2020/06/30/daily-review-30-06-2020/" class="archive-article-date">
-  	<time datetime="2020-06-30T16:10:16.389Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-30</time>
+  	<time datetime="2020-06-30T16:16:43.580Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-30</time>
 </a>
         
       </header>
@@ -173,13 +173,12 @@
         <hr>
 <p>title: daily review 30.06.2020<br>date: 2020-06-30 18:08:05<br>tags: daily review<br>–<br>I have finished the Intelligente System Hausarbeit today and have created my own domain bobyuan.com on AliCloud, which has not been put into use yet because of some technical Stoerung and i will realize it asap</p>
 <h2 id="Informatik-field"><a href="#Informatik-field" class="headerlink" title="Informatik field:"></a>Informatik field:</h2><h4 id="Local-Beam-Search"><a href="#Local-Beam-Search" class="headerlink" title="Local Beam Search:"></a>Local Beam Search:</h4><p>I reviewed the local beam search today. it is a lokale Suche and the basic idea is to find all the neighbor from the current state, and test, if the state value from the best-neighbor better than the current situation is. If yes, then take the top k-best neighbor and iterating the process above. The algorithm terminates when the state value from the neighbor is not better than the state value of the current state.</p>
-<img src="/Users/yeyuan/Downloads/IMG_AFAC9EF66F63-1.jpeg" alt="IMG_AFAC9EF66F63-1" style="zoom:60%;" />
-
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ggarrfxwfqj315l0ls7ic.jpg" alt="IMG_AFAC9EF66F63-1" style="zoom:60%;" />
 
 
 <p>The picture above is the pseudo code from the Folie.</p>
 <h3 id="Simulated-Annealing"><a href="#Simulated-Annealing" class="headerlink" title="Simulated Annealing"></a>Simulated Annealing</h3><p>I also reviewed the simulated annealing algorithm . The basic idea of that algorithm is that it simulates the annealing process on physics, which means if here comes a locale Maxima, there will be a certain probability that Algo rejected and move forward. Thus makes it possible to find the global maximum. The following snapshot shows its algorithm, which is also cut from the folien.</p>
-<p><img src="/Users/yeyuan/Downloads/IMG_6B5CF0F491A3-1.jpeg" alt="IMG_6B5CF0F491A3-1"></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ggarrs2od2j315o0lok5j.jpg" alt="IMG_6B5CF0F491A3-1"></p>
 <h4 id="Hypothesis-What-if-we-combine-the-local-beam-search-and-simulated-annealing-would-it-be-more-accurate-to-find-globale-maximum-The-pseudo-code-below"><a href="#Hypothesis-What-if-we-combine-the-local-beam-search-and-simulated-annealing-would-it-be-more-accurate-to-find-globale-maximum-The-pseudo-code-below" class="headerlink" title="Hypothesis: What if we combine the local beam search and simulated annealing? would it be more accurate to find globale maximum?  The pseudo code below:"></a>Hypothesis: What if we combine the local beam search and simulated annealing? would it be more accurate to find globale maximum?  The pseudo code below:</h4><p>function Beam_Annealing return a solution state:</p>
 <p>​    Inputs: <code>problem</code>, a problem</p>
 <p>​                <code>schedule</code>, a mapping from time to “temperature”</p>
