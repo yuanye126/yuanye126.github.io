@@ -150,6 +150,88 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-daily-review-01-07-2020" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/01/daily-review-01-07-2020/">daily-review-01-07-2020</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/01/daily-review-01-07-2020/" class="archive-article-date">
+  	<time datetime="2020-07-01T19:29:43.754Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>title: daily review 01.07.2020<br>date: 2020-07-01 21:28:41<br>tags:<br>–</p>
+<h2 id="Informatik"><a href="#Informatik" class="headerlink" title="Informatik"></a>Informatik</h2><p>I watched some FSV video today which is about the DPLL Algotithm. It is related to the AussagenLogik. But what it is all about may need some further study…</p>
+<p>A great news is, with the instruction from Github, i now successfully connect the github website to my own domain! So welcome to bobyuan.com !</p>
+<h2 id="Statistik"><a href="#Statistik" class="headerlink" title="Statistik"></a>Statistik</h2><p>I have learnt some R today, which is mainly about importing data</p>
+<h4 id="Instructions-of-loading-a-data-base-in-R"><a href="#Instructions-of-loading-a-data-base-in-R" class="headerlink" title="Instructions of loading a data base in R:"></a>Instructions of loading a data base in R:</h4><p>library(DBI)</p>
+<p>data &lt;-dbConnect(RMySQL :: MySQL()</p>
+<p>​                    dbname =”hi”</p>
+<p>​                    host =””</p>
+<p>​                    port = “”</p>
+<p>​                    user = “”</p>
+<p>​                 password =””            </p>
+<p>)</p>
+<p>With the code above we will connect with the MySQL database <code>hi</code></p>
+<h4 id="Use-SQL-Befehl-to-make-request-from-the-DataBase"><a href="#Use-SQL-Befehl-to-make-request-from-the-DataBase" class="headerlink" title="Use SQL Befehl to make request from the DataBase"></a>Use SQL Befehl to make request from the DataBase</h4><p>Then use <code>dbListTable()</code> to list all the table from the Database</p>
+<p>​        use <code>dbReadTable(data,&quot;&quot;)</code> to read the table</p>
+<p>To get query , simply use <code>dbGetQuery(data, (SQL BEFEHL))</code>. It was so surprised that i used SQL again after Datenbankstruktur!</p>
+<p>If the data you want has a lot and could not load in one time, you may use <code>dbSendQuery()</code> to send the request and use <code>dbFetch(, n =?)</code> to fetch the data with the n information at one time. When finished, use <code>dbClearResult()</code></p>
+<p>to disconnect the database, use <code>dbDisconnect()</code></p>
+<h4 id="Import-data-from-JSON"><a href="#Import-data-from-JSON" class="headerlink" title="Import data from JSON"></a>Import data from JSON</h4><p>import data from JSON format: fromJSON(“url”)</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/01/daily-review-01-07-2020/">show all >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-daily-review-30-06-2020" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
