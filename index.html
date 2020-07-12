@@ -150,6 +150,104 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-machine-learning-method-in-R" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/12/machine-learning-method-in-R/">machine learning method in R</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/12/machine-learning-method-in-R/" class="archive-article-date">
+  	<time datetime="2020-07-12T12:38:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Machine-Learning-method-using-R-1"><a href="#Machine-Learning-method-using-R-1" class="headerlink" title="Machine Learning method using R (1)"></a>Machine Learning method using R (1)</h2><p>I would summarize the popular machine learning methods and their realizations in R here</p>
+<h3 id="Supervised-Learning-Classification"><a href="#Supervised-Learning-Classification" class="headerlink" title="Supervised Learning , Classification"></a>Supervised Learning , Classification</h3><h4 id="Decision-Tree"><a href="#Decision-Tree" class="headerlink" title="Decision Tree:"></a>Decision Tree:</h4><p>load rpart library:     <code>library(rpart)</code></p>
+<p>model it: <code>model&lt;- rpart(outcome~loan +...,method = &quot;class&quot;)</code></p>
+<p>predict it:<code>predict(model, test_data, type = &quot;class&quot;)</code></p>
+<p>plot it: load rpart.plot library <code>rpart.plot(model)</code></p>
+<p>Divide the whole data set into Train and Test data:</p>
+<p><code>nrow(data)</code></p>
+<p><code>sample_rows &lt;- sample(nrow(), 75%nrow())</code></p>
+<p><code>data_train&lt;- data[sample_rows,]</code></p>
+<p><code>data_test &lt;- data[-sample_rows,]</code></p>
+<p>Use <code>rpart.control(maxdepth = , minsplit =)</code> to prune the trees and to decrease its complexity(Pre pruning)</p>
+<p>Use <code>plotcp(model)</code></p>
+<pre><code>`m_pruned&lt;- prune(m,cp =0.20)` (Post pruning)</code></pre><h4 id="KNN-k-nearest-neighbors"><a href="#KNN-k-nearest-neighbors" class="headerlink" title="KNN k-nearest neighbors"></a>KNN k-nearest neighbors</h4><p>have no connection with k means!</p>
+<p><code>library(class)</code></p>
+<p><code>pred &lt;- knn(trainingdata, testing_data, training_labels)</code></p>
+<h4 id="Naive-Bayes"><a href="#Naive-Bayes" class="headerlink" title="Naive Bayes"></a>Naive Bayes</h4><p><code>library(naivebayes)</code></p>
+<p><code>model &lt;- naive_bayes(location~time_of_the_day, data = location_history)</code></p>
+<p><code>future &lt;- predict(model, future_conditions)</code></p>
+<h4 id="Binary-predictions-with-regressions-logistic-regression"><a href="#Binary-predictions-with-regressions-logistic-regression" class="headerlink" title="Binary predictions with regressions (logistic regression)"></a>Binary predictions with regressions (logistic regression)</h4><p>For binary regression(contains only 0 or 1)</p>
+<p>We use a curve to model the model.</p>
+<p><code>model &lt;- glm(y~x1+x2+x3,data = data, family = &quot;binomial&quot;)</code></p>
+<p><code>prob&lt;- predict(model, test_dataset, type =&quot;response&quot;)</code></p>
+<h6 id="ROC-curves"><a href="#ROC-curves" class="headerlink" title="ROC curves"></a>ROC curves</h6><h6 id="library-ROC"><a href="#library-ROC" class="headerlink" title="library(ROC)"></a><code>library(ROC)</code></h6><p><code>ROC &lt;- roc(realdata, data_predicted)</code></p>
+<p><code>plot(ROC)</code></p>
+<p><code>auc(ROC)</code></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">machine learning, R</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/12/machine-learning-method-in-R/">show all >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-daily-review-03-07-2020" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -641,6 +739,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">machine learning, R</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
