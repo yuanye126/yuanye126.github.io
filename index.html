@@ -150,6 +150,114 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-machine-learning-using-r-3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/14/machine-learning-using-r-3/">machine learning using r(3)</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/14/machine-learning-using-r-3/" class="archive-article-date">
+  	<time datetime="2020-07-14T14:07:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Machine-Learning-methods-using-R-3"><a href="#Machine-Learning-methods-using-R-3" class="headerlink" title="Machine Learning methods using R(3)"></a>Machine Learning methods using R(3)</h1><h2 id="Unsupervised-Learning-in-R"><a href="#Unsupervised-Learning-in-R" class="headerlink" title="Unsupervised Learning in R"></a>Unsupervised Learning in R</h2><p>Types of machine learning:</p>
+<ul>
+<li><p>Unsupervised Learning </p>
+<p> Finding structure in unlabeled data</p>
+</li>
+<li><p>Supervised Learning</p>
+<p>Making Predictions based on labeled data</p>
+<p>Predictions like regression or classification </p>
+</li>
+<li><p>Reinforcement Learning(强化学习)</p>
+<p>Feed back in a real or synthetic environment</p>
+</li>
+</ul>
+<p>Unlabeled data vs Labeled data: Unlabeled data only has some data, but they are not named or classified.</p>
+<h4 id="Unsupervised-Learning"><a href="#Unsupervised-Learning" class="headerlink" title="Unsupervised Learning:"></a>Unsupervised Learning:</h4><p>Find patterns in the feature of the data</p>
+<p>Visualization of high dimensional data</p>
+<p>Pre-processing before supervised learning</p>
+<h4 id="K-means-clustering-Algorithm"><a href="#K-means-clustering-Algorithm" class="headerlink" title="K-means clustering Algorithm"></a>K-means clustering Algorithm</h4><p><code>kmeans(data,center = number of centers, nstart = attempts multiple intial configurations and reports on tht best one)</code></p>
+<p>Usually, we don’t know how many clusters do we need, so we will try each of them one by one and judge the goodness of them by minimum sum of squares.</p>
+<p><code>wss&lt;- 0</code></p>
+<p><code>for(i in 1:15){</code></p>
+<p><code>kmeans &lt;- kmeans(data, center = i, nstart = number)</code></p>
+<p><code>wss[i] &lt;- kmeans$tot.withinss</code></p>
+<p><code>}</code></p>
+<p><code>plot(1:15, wss, type = &quot;b&quot;, xlab =&quot;Number of Clusters&quot;, ylab = &quot;Within groups sum of squares&quot;)</code></p>
+<p>And find the elbow point.</p>
+<h3 id="Hierarchical-Clustering"><a href="#Hierarchical-Clustering" class="headerlink" title="Hierarchical Clustering"></a>Hierarchical Clustering</h3><p>Number of clusters is not known ahead of time</p>
+<p>Two kinds: bottom-up and top-down</p>
+<p>Top- down:</p>
+<p>Imagine we have 5 points, we will say that these 5 points are different 5 clusters, then we will merge the 2 clusters into one depending on its distance, and keep iterating the process….</p>
+<p><code>hclust(dist(x))</code></p>
+<p>draw a dendrogram</p>
+<p><code>plot(hclust.out)</code></p>
+<p><code>abline(h = 6, col = &quot;red&quot;)</code></p>
+<p>Tree cutting</p>
+<p><code>cutree(hclust.out,h =6)</code></p>
+<p><code>cutree(hclust.out, k =2)</code></p>
+<p>Pre-task:</p>
+<p>use <code>scale(x)</code> to scale the matrix data(normalization )</p>
+<h3 id="PCA-principle-component-analysis"><a href="#PCA-principle-component-analysis" class="headerlink" title="PCA(principle component analysis)"></a>PCA(principle component analysis)</h3><p>decrese the dimension of the data</p>
+<p><code>prcomp(data, scale = T/F, center = T/F)</code></p>
+<p>use <code>biplot(model)</code> to visualize the goodness of the model</p>
+<p>ScreePlot:</p>
+<p><code>var&lt;- model$sdev^2</code></p>
+<p><code>pve &lt;- var/sum(var)</code></p>
+<p><code>plot(ave,ylim = c(0,1), type = &quot;b&quot;)</code></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/14/machine-learning-using-r-3/">show all >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-machine-learning-using-r-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
