@@ -6,19 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>machine learning using r(2) | Hexo</title>
+  <title>Tag: lineare modelle, effect coding, dummy coding | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Machine Learning method using R(2)Regression in Machine LearningWhat is Regression?How many units will we sell(Regression) Will this customer buy our product?(y&#x2F;n) (Classification) What price will the">
-<meta property="og:type" content="article">
-<meta property="og:title" content="machine learning using r(2)">
-<meta property="og:url" content="http://yoursite.com/2020/07/13/machine-learning-using-r-2/index.html">
+  <meta name="description" content="Student studies CS in LMU Munich">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/tags/lineare-modelle-effect-coding-dummy-coding/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Machine Learning method using R(2)Regression in Machine LearningWhat is Regression?How many units will we sell(Regression) Will this customer buy our product?(y&#x2F;n) (Classification) What price will the">
+<meta property="og:description" content="Student studies CS in LMU Munich">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-13T18:31:47.000Z">
-<meta property="article:modified_time" content="2020-07-13T18:34:56.354Z">
 <meta property="article:author" content="Ye Yuan">
-<meta property="article:tag" content="machine learning, R">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -151,240 +148,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-machine-learning-using-r-2" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      machine learning using r(2)
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/07/17/lineare-modelle-review-1/" class="archive-article-date">
+  	<time datetime="2020-07-17T15:27:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-17</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/07/17/lineare-modelle-review-1/">lineare modelle review(1)</a>
     </h1>
   
 
-        
-        <a href="/2020/07/13/machine-learning-using-r-2/" class="archive-article-date">
-  	<time datetime="2020-07-13T18:31:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Machine-Learning-method-using-R-2"><a href="#Machine-Learning-method-using-R-2" class="headerlink" title="Machine Learning method using R(2)"></a>Machine Learning method using R(2)</h2><h3 id="Regression-in-Machine-Learning"><a href="#Regression-in-Machine-Learning" class="headerlink" title="Regression in Machine Learning"></a>Regression in Machine Learning</h3><h5 id="What-is-Regression"><a href="#What-is-Regression" class="headerlink" title="What is Regression?"></a>What is Regression?</h5><p>How many units will we sell(Regression)</p>
-<p>Will this customer buy our product?(y/n) (Classification)</p>
-<p>What price will the customer pay for our product(Regression)</p>
-<h5 id="Use"><a href="#Use" class="headerlink" title="Use"></a>Use</h5><p><code>model &lt;- lm(formula = formula, data = data)</code></p>
-<p><code>formula = as.formula(&quot;y~x&quot;)</code></p>
-<h5 id="For-Situations-where-order-is-more-important-than-exact-values-the-gain-curve-helps-you-to-check-if-the-model’s-predictions-sort-in-the-same-order-as-the-true-outcome"><a href="#For-Situations-where-order-is-more-important-than-exact-values-the-gain-curve-helps-you-to-check-if-the-model’s-predictions-sort-in-the-same-order-as-the-true-outcome" class="headerlink" title="For Situations where order is more important than exact values, the gain curve helps you to check if the model’s predictions sort in the same order as the true outcome."></a>For Situations where order is more important than exact values, the gain curve helps you to check if the model’s predictions sort in the same order as the true outcome.</h5><p><code>GainCurvePlot(frame, xvar, truthvar, title)</code></p>
-<p>where <code>frame</code> is the data frame, <code>xvar</code> and <code>truthvar</code> are strings naming the prediction and actual outcome columns of frame, <code>title</code> is the title of the plot.</p>
-<h5 id="The-Residual-Plot"><a href="#The-Residual-Plot" class="headerlink" title="The Residual Plot"></a>The Residual Plot</h5><p><code>x$residuals &lt;- resid(x_model)</code></p>
-<p><code>ggplot(x,aes(predictions, residuals))</code></p>
-<h5 id="Root-Mean-Squared-Error-RMSE"><a href="#Root-Mean-Squared-Error-RMSE" class="headerlink" title="Root Mean Squared Error(RMSE)"></a>Root Mean Squared Error(RMSE)</h5><p>error = ypredict - yreal</p>
-<p>RMSE =sqrt(mean(error))</p>
-<p>We often use RMSE together with sd()</p>
-<p>when RMSE &lt; sd() =&gt; our model is better than simply the mean()</p>
-<h5 id="R-Squared-how-well-the-model-fits-or-explains-the-data"><a href="#R-Squared-how-well-the-model-fits-or-explains-the-data" class="headerlink" title="R Squared, how well the model fits or explains the data"></a>R Squared, how well the model fits or explains the data</h5><p>near 1 =&gt; Model fits well</p>
-<p>near 0=&gt; no better than guessing the average value</p>
-<p>R^2 &lt;- 1 - RSS/SST</p>
-<p>rss &lt;- sum(err^2)</p>
-<p>totert &lt;- y - mean(y)</p>
-<p>sstot &lt;- sum(totert ^2)</p>
-<p>r_squared = 1- rss/sstot</p>
-<p>R^2 = correlation ^2</p>
-<h5 id="Create-Cross-Validation-plan-交叉验证"><a href="#Create-Cross-Validation-plan-交叉验证" class="headerlink" title="Create Cross Validation plan(交叉验证)"></a>Create Cross Validation plan(交叉验证)</h5><p><code>library(vtreat)</code></p>
-<p><code>splitPlan &lt;- kWayCrossValidation(nRows, nSplits,NULL,NULL)</code></p>
-<p><code>nRows</code>: number of rows in the training data</p>
-<p><code>nSplits</code>: number folds in the cross-validation</p>
-<h6 id="Generate-the-training-and-test-data-set"><a href="#Generate-the-training-and-test-data-set" class="headerlink" title="Generate the training and test data set"></a>Generate the training and test data set</h6><p><code>N&lt;- nrow(data)</code> to get the number of rows in the data set</p>
-<p><code>gp &lt;- runif(N)</code> to generate vector of N uniform random unmbers,callled gp</p>
-<p><code>data_train &lt;-  data[gp&lt;0.75,]</code></p>
-<p><code>data_test &lt;- data[gp &gt;= 0.75,]</code></p>
-<h4 id="Deal-with-Categorical-Data"><a href="#Deal-with-Categorical-Data" class="headerlink" title="Deal with Categorical Data"></a>Deal with Categorical Data</h4><p><code>model_matrix &lt;- model.matrix(formula, data)</code></p>
-<p>which is used to convert categorical data into 1,0.</p>
-<h6 id="Interaction"><a href="#Interaction" class="headerlink" title="Interaction"></a>Interaction</h6><p>y~a:b a interacts with b</p>
-<p>y<del>a*b &lt;=&gt; y</del>a+b+a:b</p>
-<h5 id="Logistic-regression-to-predeict-probabilities"><a href="#Logistic-regression-to-predeict-probabilities" class="headerlink" title="Logistic regression to predeict probabilities"></a>Logistic regression to predeict probabilities</h5><p>Predicting whether an event occurs(y/n) : classification</p>
-<p>Predicting the probablity that an event occurs: Regression</p>
-<p>Standard Linear Regression: predicts values in[,]</p>
-<p>Probabilities: limited to [0,1] interval  =&gt; We use Logistic Regression!</p>
-<p><strong>Assumes inputs additive, linear in log-odds( 赔率）: log(p/(1-p))</strong></p>
-<p>Recommend to encode to outcome to 0/1 or FALSE/TRUE    </p>
-<p>To get the probabilities , use <strong>type = “response”</strong></p>
-<p>PseudoR^2 is used to judge whether the model good is.</p>
-<p><code>glance(model%&gt;% summarize(pR2 = 1 -deviance/null.deviance))</code> or <code>wrapChiSqTest()</code></p>
-<p>Use     <code>GainCurvePlot(data frame, the column predicted, the column with the real data, label )</code>to visualize the accuracy of the prediction</p>
-<h5 id="Poisson-Quasipoisson-Regression"><a href="#Poisson-Quasipoisson-Regression" class="headerlink" title="Poisson/Quasipoisson Regression"></a>Poisson/Quasipoisson Regression</h5><p>Assumes inputs additive and linear in log(count)</p>
-<p>Outcome : integer</p>
-<p>Poisson assumes that mean(y) = var(y)</p>
-<p>If var(y) much different from mean(y) - quasipoisson</p>
-<p>Generally requires a large data set</p>
-<p>use pseudoR^2 to check the goodness</p>
-<h4 id="GAMs-generalized-additive-models"><a href="#GAMs-generalized-additive-models" class="headerlink" title="GAMs(generalized additive models)"></a>GAMs(generalized additive models)</h4><p>We are sure that it is not a linear model, but we are not sure whether it is a quadratic, cubic or sth else.</p>
-<p><code>gam(formula, family, data)</code></p>
-<p>Family:</p>
-<p>Gaussian(default) :regular expression</p>
-<p>Binomial : probabilities</p>
-<p>Poisson/quasipoisson : counts(计数)</p>
-<p>Likely to overfit: Best for large data sets</p>
-<p>Use s() function to specify there is no lineare zusammenhang</p>
-<p>Best to use when you don’t have specific domain knowledge .</p>
-<h3 id="The-intuition-behind-the-decision-tree"><a href="#The-intuition-behind-the-decision-tree" class="headerlink" title="The intuition behind the decision tree"></a>The intuition behind the decision tree</h3><h5 id="Random-Forest"><a href="#Random-Forest" class="headerlink" title="Random Forest:"></a>Random Forest:</h5><p>Mutiple diverse decision trees averaged together </p>
-<p>  *Reduces overfit</p>
-<ul>
-<li>Increases model expressiveness</li>
-<li>Finer gain predictions</li>
-</ul>
-<p>`model &lt;- ranger(fmla, data, num.trees = (usually &gt;200), respect.unordered.factors = “order”)</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">machine learning, R</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">lineare modelle, effect coding, dummy coding</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/13/machine-learning-using-r-2/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/07/14/machine-learning-using-r-3/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          machine learning using r(3)
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/07/12/machine-learning-method-in-R/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">machine learning method in R</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -407,9 +224,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,

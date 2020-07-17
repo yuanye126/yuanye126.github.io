@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>machine learning using r(2) | Hexo</title>
+  <title>lineare modelle review(1) | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Machine Learning method using R(2)Regression in Machine LearningWhat is Regression?How many units will we sell(Regression) Will this customer buy our product?(y&#x2F;n) (Classification) What price will the">
+  <meta name="description" content="Review Lineare Modelle(1)WHAT IS DUMMY CODING?DUMMY CODINGPerhaps the simplest and perhaps most common coding system is called dummy coding. It is a way to make the categorical variable into a series">
 <meta property="og:type" content="article">
-<meta property="og:title" content="machine learning using r(2)">
-<meta property="og:url" content="http://yoursite.com/2020/07/13/machine-learning-using-r-2/index.html">
+<meta property="og:title" content="lineare modelle review(1)">
+<meta property="og:url" content="http://yoursite.com/2020/07/17/lineare-modelle-review-1/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Machine Learning method using R(2)Regression in Machine LearningWhat is Regression?How many units will we sell(Regression) Will this customer buy our product?(y&#x2F;n) (Classification) What price will the">
+<meta property="og:description" content="Review Lineare Modelle(1)WHAT IS DUMMY CODING?DUMMY CODINGPerhaps the simplest and perhaps most common coding system is called dummy coding. It is a way to make the categorical variable into a series">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-13T18:31:47.000Z">
-<meta property="article:modified_time" content="2020-07-13T18:34:56.354Z">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1ggudtav2w0j30qo096q41.jpg">
+<meta property="article:published_time" content="2020-07-17T15:27:59.000Z">
+<meta property="article:modified_time" content="2020-07-17T15:29:26.513Z">
 <meta property="article:author" content="Ye Yuan">
-<meta property="article:tag" content="machine learning, R">
+<meta property="article:tag" content="lineare modelle, effect coding, dummy coding">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1ggudtav2w0j30qo096q41.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -151,91 +153,85 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-machine-learning-using-r-2" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-lineare-modelle-review-1" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      machine learning using r(2)
+      lineare modelle review(1)
     </h1>
   
 
         
-        <a href="/2020/07/13/machine-learning-using-r-2/" class="archive-article-date">
-  	<time datetime="2020-07-13T18:31:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
+        <a href="/2020/07/17/lineare-modelle-review-1/" class="archive-article-date">
+  	<time datetime="2020-07-17T15:27:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Machine-Learning-method-using-R-2"><a href="#Machine-Learning-method-using-R-2" class="headerlink" title="Machine Learning method using R(2)"></a>Machine Learning method using R(2)</h2><h3 id="Regression-in-Machine-Learning"><a href="#Regression-in-Machine-Learning" class="headerlink" title="Regression in Machine Learning"></a>Regression in Machine Learning</h3><h5 id="What-is-Regression"><a href="#What-is-Regression" class="headerlink" title="What is Regression?"></a>What is Regression?</h5><p>How many units will we sell(Regression)</p>
-<p>Will this customer buy our product?(y/n) (Classification)</p>
-<p>What price will the customer pay for our product(Regression)</p>
-<h5 id="Use"><a href="#Use" class="headerlink" title="Use"></a>Use</h5><p><code>model &lt;- lm(formula = formula, data = data)</code></p>
-<p><code>formula = as.formula(&quot;y~x&quot;)</code></p>
-<h5 id="For-Situations-where-order-is-more-important-than-exact-values-the-gain-curve-helps-you-to-check-if-the-model’s-predictions-sort-in-the-same-order-as-the-true-outcome"><a href="#For-Situations-where-order-is-more-important-than-exact-values-the-gain-curve-helps-you-to-check-if-the-model’s-predictions-sort-in-the-same-order-as-the-true-outcome" class="headerlink" title="For Situations where order is more important than exact values, the gain curve helps you to check if the model’s predictions sort in the same order as the true outcome."></a>For Situations where order is more important than exact values, the gain curve helps you to check if the model’s predictions sort in the same order as the true outcome.</h5><p><code>GainCurvePlot(frame, xvar, truthvar, title)</code></p>
-<p>where <code>frame</code> is the data frame, <code>xvar</code> and <code>truthvar</code> are strings naming the prediction and actual outcome columns of frame, <code>title</code> is the title of the plot.</p>
-<h5 id="The-Residual-Plot"><a href="#The-Residual-Plot" class="headerlink" title="The Residual Plot"></a>The Residual Plot</h5><p><code>x$residuals &lt;- resid(x_model)</code></p>
-<p><code>ggplot(x,aes(predictions, residuals))</code></p>
-<h5 id="Root-Mean-Squared-Error-RMSE"><a href="#Root-Mean-Squared-Error-RMSE" class="headerlink" title="Root Mean Squared Error(RMSE)"></a>Root Mean Squared Error(RMSE)</h5><p>error = ypredict - yreal</p>
-<p>RMSE =sqrt(mean(error))</p>
-<p>We often use RMSE together with sd()</p>
-<p>when RMSE &lt; sd() =&gt; our model is better than simply the mean()</p>
-<h5 id="R-Squared-how-well-the-model-fits-or-explains-the-data"><a href="#R-Squared-how-well-the-model-fits-or-explains-the-data" class="headerlink" title="R Squared, how well the model fits or explains the data"></a>R Squared, how well the model fits or explains the data</h5><p>near 1 =&gt; Model fits well</p>
-<p>near 0=&gt; no better than guessing the average value</p>
-<p>R^2 &lt;- 1 - RSS/SST</p>
-<p>rss &lt;- sum(err^2)</p>
-<p>totert &lt;- y - mean(y)</p>
-<p>sstot &lt;- sum(totert ^2)</p>
-<p>r_squared = 1- rss/sstot</p>
-<p>R^2 = correlation ^2</p>
-<h5 id="Create-Cross-Validation-plan-交叉验证"><a href="#Create-Cross-Validation-plan-交叉验证" class="headerlink" title="Create Cross Validation plan(交叉验证)"></a>Create Cross Validation plan(交叉验证)</h5><p><code>library(vtreat)</code></p>
-<p><code>splitPlan &lt;- kWayCrossValidation(nRows, nSplits,NULL,NULL)</code></p>
-<p><code>nRows</code>: number of rows in the training data</p>
-<p><code>nSplits</code>: number folds in the cross-validation</p>
-<h6 id="Generate-the-training-and-test-data-set"><a href="#Generate-the-training-and-test-data-set" class="headerlink" title="Generate the training and test data set"></a>Generate the training and test data set</h6><p><code>N&lt;- nrow(data)</code> to get the number of rows in the data set</p>
-<p><code>gp &lt;- runif(N)</code> to generate vector of N uniform random unmbers,callled gp</p>
-<p><code>data_train &lt;-  data[gp&lt;0.75,]</code></p>
-<p><code>data_test &lt;- data[gp &gt;= 0.75,]</code></p>
-<h4 id="Deal-with-Categorical-Data"><a href="#Deal-with-Categorical-Data" class="headerlink" title="Deal with Categorical Data"></a>Deal with Categorical Data</h4><p><code>model_matrix &lt;- model.matrix(formula, data)</code></p>
-<p>which is used to convert categorical data into 1,0.</p>
-<h6 id="Interaction"><a href="#Interaction" class="headerlink" title="Interaction"></a>Interaction</h6><p>y~a:b a interacts with b</p>
-<p>y<del>a*b &lt;=&gt; y</del>a+b+a:b</p>
-<h5 id="Logistic-regression-to-predeict-probabilities"><a href="#Logistic-regression-to-predeict-probabilities" class="headerlink" title="Logistic regression to predeict probabilities"></a>Logistic regression to predeict probabilities</h5><p>Predicting whether an event occurs(y/n) : classification</p>
-<p>Predicting the probablity that an event occurs: Regression</p>
-<p>Standard Linear Regression: predicts values in[,]</p>
-<p>Probabilities: limited to [0,1] interval  =&gt; We use Logistic Regression!</p>
-<p><strong>Assumes inputs additive, linear in log-odds( 赔率）: log(p/(1-p))</strong></p>
-<p>Recommend to encode to outcome to 0/1 or FALSE/TRUE    </p>
-<p>To get the probabilities , use <strong>type = “response”</strong></p>
-<p>PseudoR^2 is used to judge whether the model good is.</p>
-<p><code>glance(model%&gt;% summarize(pR2 = 1 -deviance/null.deviance))</code> or <code>wrapChiSqTest()</code></p>
-<p>Use     <code>GainCurvePlot(data frame, the column predicted, the column with the real data, label )</code>to visualize the accuracy of the prediction</p>
-<h5 id="Poisson-Quasipoisson-Regression"><a href="#Poisson-Quasipoisson-Regression" class="headerlink" title="Poisson/Quasipoisson Regression"></a>Poisson/Quasipoisson Regression</h5><p>Assumes inputs additive and linear in log(count)</p>
-<p>Outcome : integer</p>
-<p>Poisson assumes that mean(y) = var(y)</p>
-<p>If var(y) much different from mean(y) - quasipoisson</p>
-<p>Generally requires a large data set</p>
-<p>use pseudoR^2 to check the goodness</p>
-<h4 id="GAMs-generalized-additive-models"><a href="#GAMs-generalized-additive-models" class="headerlink" title="GAMs(generalized additive models)"></a>GAMs(generalized additive models)</h4><p>We are sure that it is not a linear model, but we are not sure whether it is a quadratic, cubic or sth else.</p>
-<p><code>gam(formula, family, data)</code></p>
-<p>Family:</p>
-<p>Gaussian(default) :regular expression</p>
-<p>Binomial : probabilities</p>
-<p>Poisson/quasipoisson : counts(计数)</p>
-<p>Likely to overfit: Best for large data sets</p>
-<p>Use s() function to specify there is no lineare zusammenhang</p>
-<p>Best to use when you don’t have specific domain knowledge .</p>
-<h3 id="The-intuition-behind-the-decision-tree"><a href="#The-intuition-behind-the-decision-tree" class="headerlink" title="The intuition behind the decision tree"></a>The intuition behind the decision tree</h3><h5 id="Random-Forest"><a href="#Random-Forest" class="headerlink" title="Random Forest:"></a>Random Forest:</h5><p>Mutiple diverse decision trees averaged together </p>
-<p>  *Reduces overfit</p>
-<ul>
-<li>Increases model expressiveness</li>
-<li>Finer gain predictions</li>
-</ul>
-<p>`model &lt;- ranger(fmla, data, num.trees = (usually &gt;200), respect.unordered.factors = “order”)</p>
+        <h1 id="Review-Lineare-Modelle-1"><a href="#Review-Lineare-Modelle-1" class="headerlink" title="Review Lineare Modelle(1)"></a>Review Lineare Modelle(1)</h1><h3 id="WHAT-IS-DUMMY-CODING"><a href="#WHAT-IS-DUMMY-CODING" class="headerlink" title="WHAT IS DUMMY CODING?"></a>WHAT IS DUMMY CODING?</h3><h4 id="DUMMY-CODING"><a href="#DUMMY-CODING" class="headerlink" title="DUMMY CODING"></a>DUMMY CODING</h4><p>Perhaps the simplest and perhaps most common coding system is called <strong>dummy coding</strong>. It is a way to make the categorical variable into a series of dichotomous variables (variables that can have a value of zero or one only.) For all but one of the levels of the categorical variable, a new variable will be created that has a value of one for each observation at that level and zero for all others. In our example using the variable race, the first new variable (x1) will have a value of one for each observation in which race is Hispanic, and zero for all other observations. Likewise, we create <strong>x2</strong> to be 1 when the person is Asian, and 0 otherwise, and <strong>x3</strong>is 1 when the person is African American, and 0 otherwise. The level of the categorical variable that is coded as zero in all of the new variables is the reference level, or the level to which all of the other levels are compared. In our example, white is the reference level. You can select any level of the categorical variable as the reference level. </p>
+<p>DUMMY CODING</p>
+<table>
+<thead>
+<tr>
+<th>Level of race</th>
+<th>New variable 1 (x1)</th>
+<th>New variable 2 (x2)</th>
+<th>New variable 3 (x3)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1 (Hispanic)</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2 (Asian)</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>3 (African American)</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4 (white)</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<h3 id="WHAT-IS-EFFECT-CODING"><a href="#WHAT-IS-EFFECT-CODING" class="headerlink" title="WHAT IS EFFECT CODING?"></a>WHAT IS EFFECT CODING?</h3><p>Effect coding provides one way of using categorical predictor variables in various kinds of estimation models (see also <a href="https://stats.idre.ucla.edu/other/mult-pkg/faq/general/faqwhat-is-dummy-coding/" target="_blank" rel="noopener">dummy coding</a>), such as, linear regression. Effect coding uses only ones, zeros and minus ones to convey all of the necessary information on group membership. Consider the following example in which there are four observations within each of four groups:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">+-----------------------------------+</span><br><span class="line">| group |  g1  |  g2  |  g3  |  g4  |</span><br><span class="line">|-------|------+------+------+------|</span><br><span class="line">|       |   1  |   2  |   5  |  10  |</span><br><span class="line">|       |   3  |   3  |   6  |  10  |</span><br><span class="line">|       |   2  |   4  |   4  |   9  |</span><br><span class="line">|       |   2  |   3  |   5  |  11  |</span><br><span class="line">+-----------------------------------+</span><br><span class="line">| mean  |   2  |   3  |   5  |  10  |</span><br><span class="line">+-----------------------------------+</span><br><span class="line"></span><br><span class="line">Grand mean &#x3D; 5</span><br></pre></td></tr></table></figure>
+
+<p>For this example we will need to create three effect coded variables. In general, with k groups there will be k-1 coded variables. Each of the effect coded variables uses one degree of freedom, so k groups has k-1 degrees of freedom, just like in analysis of variance.</p>
+<p>Here is how we will create the effect variables which we will call e1, e2 and e3. For e1, every observation in group 1 will be coded as 1, 0 for groups 2 and 3, and -1 for group 4. We then code e2 with 1 if the observation is in group 2 and 0 for groups 1 and 3, and -1 for group 4. For e3, observations in group 3 will be coded 1 and 0 for groups 1 and 2, and -1 for group 4. For e4, there is no e4. e4 is not needed because e1-e3 has all of the information needed to determine which observation is in which group.</p>
+<p>Here is how the data look when arranged for use with a regression procedure.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"> y  grp  e1   e2   e3</span><br><span class="line"> 1   1    1    0    0</span><br><span class="line"> 3   1    1    0    0</span><br><span class="line"> 2   1    1    0    0</span><br><span class="line"> 2   1    1    0    0</span><br><span class="line"> 2   2    0    1    0</span><br><span class="line"> 3   2    0    1    0</span><br><span class="line"> 4   2    0    1    0</span><br><span class="line"> 3   2    0    1    0</span><br><span class="line"> 5   3    0    0    1</span><br><span class="line"> 6   3    0    0    1</span><br><span class="line"> 4   3    0    0    1</span><br><span class="line"> 5   3    0    0    1</span><br><span class="line">10   4   -1   -1   -1</span><br><span class="line">10   4   -1   -1   -1</span><br><span class="line"> 9   4   -1   -1   -1</span><br><span class="line">11   4   -1   -1   -1</span><br></pre></td></tr></table></figure>
+
+<p>Note that every observation in group 1 has the effect code value of 1 for e1 and 0 for the others. Those in group 2 have 1 for e2 and 0 otherwise, and for group 3 e3 equals 1 with 0 for the others. Observations in group 4 have all -1s on e1, e2 and e3. These three effect variables contain all of the information needed to determine which observations are included in which group. If you are in group 1 then e1 is equal to 1 while e2 and e3 are 0. Thus, each of the groups is defined by having a one of the effect variables equal to one except of one group which is all -1s. The group with all -1s is known as the reference group, which in our example is group 4. We will see exactly what this means after we look at the regression analysis results.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> F(3, 12) &#x3D; 76.00  P &#x3D; 0.0000  R-squared &#x3D; 0.95</span><br><span class="line"></span><br><span class="line">-------------------------------------------------</span><br><span class="line">       y |      Coef.   Std. Err.      t    P&gt;|t|</span><br><span class="line">---------+---------------------------------------</span><br><span class="line">      e1 |         -3   .3535534    -8.49   0.000</span><br><span class="line">      e2 |         -2   .3535534    -5.66   0.000</span><br><span class="line">      e3 |   2.36e-16   .3535534     0.00   1.000</span><br><span class="line">constant |          5   .2041241    24.49   0.000</span><br><span class="line">-------------------------------------------------</span><br></pre></td></tr></table></figure>
+
+<p>With effect coding the constant is equal to the grand mean of all of the observations. In this case, the value is equal to 5 which is the grand mean. The coefficients of each of the effect variables is equal to the difference between the mean of the group coded 1 and the grand mean. In our example the mean of group 1 is 2 and the difference of 2-5 is -3, which is the value of the regression coefficient for e1. The t-test associated with that coefficient is the test of group 1 versus the grand mean. The coefficient for e3 is 2.36e-16 which is just a computer rounding way of saying zero, i.e., 5-5 equals 0 give or take some rounding error.</p>
+<p>What if you used group 1 as the reference group? That is, what if group 1 was the group coded with all -1s? In that case, the value of the constant would still be the grand mean. The coefficients for e2 and e3 will have the same values, but the coefficients for e1 will be replaced by the coefficient for e4, the difference between the grand mean and group 4. In all other respects the models are identical with the same F-ratio and R-squared regardless of which group is selected as the reference group.</p>
+<h3 id="Unbalanced-data"><a href="#Unbalanced-data" class="headerlink" title="Unbalanced data"></a>Unbalanced data</h3><p>By unbalanced data we mean unequal group sizes. There are a couple of differences when using effect coding with unbalanced designs. Consider the following four group design:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">+-----------------------------------+</span><br><span class="line">| group |  g1  |  g2  |  g3  |  g4  |</span><br><span class="line">|-------|------+------+------+------|</span><br><span class="line">|       |   1  |      |      |  10  |</span><br><span class="line">|       |   3  |   3  |   6  |  10  |</span><br><span class="line">|       |   2  |   4  |      |   9  |</span><br><span class="line">|       |   2  |      |   5  |  11  |</span><br><span class="line">+-----------------------------------+</span><br><span class="line">| mean  |   2  |  3.5 |  5.5 |  10  |</span><br><span class="line">+-----------------------------------+</span><br><span class="line"></span><br><span class="line">Grand mean &#x3D; 5.5 -- Unweighted grand mean &#x3D; 5.25</span><br></pre></td></tr></table></figure>
+
+<p>In the table above, the grand mean (5.5) is the overall mean of the 12 observations while the unweighted grand mean (5.25) is just the simple average of the four group means.</p>
+<p>Now if we do the standard effect coding and run the regression we get the following summary table.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> F(3, 12) &#x3D; 73.60  P &#x3D; 0.0000  R-squared &#x3D; 0.965</span><br><span class="line"></span><br><span class="line">-------------------------------------------------</span><br><span class="line">       y |      Coef.   Std. Err.      t    P&gt;|t|</span><br><span class="line">---------+---------------------------------------</span><br><span class="line">      e1 |      -3.25   .369755     -8.79   0.000 </span><br><span class="line">      e2 |      -1.75   .4635124    -3.78   0.005 </span><br><span class="line">      e3 |        .25   .4635124     0.54   0.604 </span><br><span class="line">constant |       5.25   .2420615    21.69   0.000 </span><br><span class="line">-------------------------------------------------</span><br></pre></td></tr></table></figure>
+
+<p>Now the constant for the model is the unweighted grand mean, i.e., the mean of means. In all other respects the coefficients are interpreted in the way except that you replace grand mean with the term unweighted grand mean. Of course, what is really going on is that for balanced groups, the weighted and unweighted means are the same.</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ggudtav2w0j30qo096q41.jpg" alt="Screen Shot 2020-07-17 at 5.22.16 PM"></p>
+<h3 id="Why-use-effect-coding"><a href="#Why-use-effect-coding" class="headerlink" title="Why use effect coding?"></a>Why use effect coding?</h3><p>Here’s a good question, why use effect coding instead of dummy coding? If you have several categorical variables in a model it often doesn’t make much difference whether you use effect coding or dummy coding. However, if you have an interaction of two categorical variables then effect coding may provide some benefits. The primary benefit is that you get reasonable estimates of both the main effects and interaction using effect coding. With dummy coding the estimate of the interaction is fine but main effects are not “true” main effects but rather what are called simple effects, i.e., the effect of one variable at one level of the other variable. This is why most analysis of variance programs use some type of effect coding when estimating the various effects in an ANOVA model.</p>
 
       
 
@@ -270,7 +266,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">machine learning, R</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">lineare modelle, effect coding, dummy coding</a>
         		</li>
       		
 		</ul>
@@ -326,7 +322,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/13/machine-learning-using-r-2/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/17/lineare-modelle-review-1/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -340,18 +336,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/14/machine-learning-using-r-3/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          machine learning using r(3)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/07/12/machine-learning-method-in-R/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">machine learning method in R</div>
+    <a href="/2020/07/14/machine-learning-using-r-3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">machine learning using r(3)</div>
       <i class="icon-circle-right"></i>
     </a>
   
