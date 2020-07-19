@@ -6,17 +6,36 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>The Interpretation of basic LM using R | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Student studies CS in LMU Munich">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="The interpretation of basic lm using RRetweet from: linear regression  前言 在我们的日常生活中，存在大量的具有相关性的事件，比如大气压和海拔高度，海拔越高大气压强越小；人的身高和体重，普遍来看越高的人体重也越重。还有一些可能存在相关性的事件，比如知识水平越高的人，收入水平越高；市场化的国家经济越好，则货币越强势，反而全球经济危">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Interpretation of basic LM using R">
+<meta property="og:url" content="http://yoursite.com/2020/07/19/The-Interpretation-of-basic-LM-using-R/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Student studies CS in LMU Munich">
+<meta property="og:description" content="The interpretation of basic lm using RRetweet from: linear regression  前言 在我们的日常生活中，存在大量的具有相关性的事件，比如大气压和海拔高度，海拔越高大气压强越小；人的身高和体重，普遍来看越高的人体重也越重。还有一些可能存在相关性的事件，比如知识水平越高的人，收入水平越高；市场化的国家经济越好，则货币越强势，反而全球经济危">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/reg.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/01.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/reg2.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/reg3.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/reg4.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/02.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/09.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/04.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/05.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/06.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/07.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/08.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/reg5.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/reg6.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/03.png">
+<meta property="article:published_time" content="2020-07-19T10:55:34.000Z">
+<meta property="article:modified_time" content="2020-07-19T10:57:00.936Z">
 <meta property="article:author" content="Ye Yuan">
+<meta property="article:tag" content="R LM P-test F-tes">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://blog.fens.me/wp-content/uploads/2016/07/reg.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -148,16 +167,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-The-Interpretation-of-basic-LM-using-R" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-The-Interpretation-of-basic-LM-using-R" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/19/The-Interpretation-of-basic-LM-using-R/">The Interpretation of basic LM using R</a>
+    <h1 class="article-title" itemprop="name">
+      The Interpretation of basic LM using R
     </h1>
   
 
@@ -324,6 +341,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -342,16 +380,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/19/The-Interpretation-of-basic-LM-using-R/">show all >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/19/The-Interpretation-of-basic-LM-using-R/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/17/lineare-modelle-review-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">lineare modelle review(1)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -371,884 +468,14 @@
 
 
 
-
   
-    <article id="post-lineare-modelle-review-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/17/lineare-modelle-review-1/">lineare modelle review(1)</a>
-    </h1>
   
 
-        
-        <a href="/2020/07/17/lineare-modelle-review-1/" class="archive-article-date">
-  	<time datetime="2020-07-17T15:27:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Review-Lineare-Modelle-1"><a href="#Review-Lineare-Modelle-1" class="headerlink" title="Review Lineare Modelle(1)"></a>Review Lineare Modelle(1)</h1><h3 id="WHAT-IS-DUMMY-CODING"><a href="#WHAT-IS-DUMMY-CODING" class="headerlink" title="WHAT IS DUMMY CODING?"></a>WHAT IS DUMMY CODING?</h3><h4 id="DUMMY-CODING"><a href="#DUMMY-CODING" class="headerlink" title="DUMMY CODING"></a>DUMMY CODING</h4><p>Perhaps the simplest and perhaps most common coding system is called <strong>dummy coding</strong>. It is a way to make the categorical variable into a series of dichotomous variables (variables that can have a value of zero or one only.) For all but one of the levels of the categorical variable, a new variable will be created that has a value of one for each observation at that level and zero for all others. In our example using the variable race, the first new variable (x1) will have a value of one for each observation in which race is Hispanic, and zero for all other observations. Likewise, we create <strong>x2</strong> to be 1 when the person is Asian, and 0 otherwise, and <strong>x3</strong>is 1 when the person is African American, and 0 otherwise. The level of the categorical variable that is coded as zero in all of the new variables is the reference level, or the level to which all of the other levels are compared. In our example, white is the reference level. You can select any level of the categorical variable as the reference level. </p>
-<p>DUMMY CODING</p>
-<table>
-<thead>
-<tr>
-<th>Level of race</th>
-<th>New variable 1 (x1)</th>
-<th>New variable 2 (x2)</th>
-<th>New variable 3 (x3)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1 (Hispanic)</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>2 (Asian)</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td>3 (African American)</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td>4 (white)</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-</tbody></table>
-<h3 id="WHAT-IS-EFFECT-CODING"><a href="#WHAT-IS-EFFECT-CODING" class="headerlink" title="WHAT IS EFFECT CODING?"></a>WHAT IS EFFECT CODING?</h3><p>Effect coding provides one way of using categorical predictor variables in various kinds of estimation models (see also <a href="https://stats.idre.ucla.edu/other/mult-pkg/faq/general/faqwhat-is-dummy-coding/" target="_blank" rel="noopener">dummy coding</a>), such as, linear regression. Effect coding uses only ones, zeros and minus ones to convey all of the necessary information on group membership. Consider the following example in which there are four observations within each of four groups:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">+-----------------------------------+</span><br><span class="line">| group |  g1  |  g2  |  g3  |  g4  |</span><br><span class="line">|-------|------+------+------+------|</span><br><span class="line">|       |   1  |   2  |   5  |  10  |</span><br><span class="line">|       |   3  |   3  |   6  |  10  |</span><br><span class="line">|       |   2  |   4  |   4  |   9  |</span><br><span class="line">|       |   2  |   3  |   5  |  11  |</span><br><span class="line">+-----------------------------------+</span><br><span class="line">| mean  |   2  |   3  |   5  |  10  |</span><br><span class="line">+-----------------------------------+</span><br><span class="line"></span><br><span class="line">Grand mean &#x3D; 5</span><br></pre></td></tr></table></figure>
-
-<p>For this example we will need to create three effect coded variables. In general, with k groups there will be k-1 coded variables. Each of the effect coded variables uses one degree of freedom, so k groups has k-1 degrees of freedom, just like in analysis of variance.</p>
-<p>Here is how we will create the effect variables which we will call e1, e2 and e3. For e1, every observation in group 1 will be coded as 1, 0 for groups 2 and 3, and -1 for group 4. We then code e2 with 1 if the observation is in group 2 and 0 for groups 1 and 3, and -1 for group 4. For e3, observations in group 3 will be coded 1 and 0 for groups 1 and 2, and -1 for group 4. For e4, there is no e4. e4 is not needed because e1-e3 has all of the information needed to determine which observation is in which group.</p>
-<p>Here is how the data look when arranged for use with a regression procedure.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"> y  grp  e1   e2   e3</span><br><span class="line"> 1   1    1    0    0</span><br><span class="line"> 3   1    1    0    0</span><br><span class="line"> 2   1    1    0    0</span><br><span class="line"> 2   1    1    0    0</span><br><span class="line"> 2   2    0    1    0</span><br><span class="line"> 3   2    0    1    0</span><br><span class="line"> 4   2    0    1    0</span><br><span class="line"> 3   2    0    1    0</span><br><span class="line"> 5   3    0    0    1</span><br><span class="line"> 6   3    0    0    1</span><br><span class="line"> 4   3    0    0    1</span><br><span class="line"> 5   3    0    0    1</span><br><span class="line">10   4   -1   -1   -1</span><br><span class="line">10   4   -1   -1   -1</span><br><span class="line"> 9   4   -1   -1   -1</span><br><span class="line">11   4   -1   -1   -1</span><br></pre></td></tr></table></figure>
-
-<p>Note that every observation in group 1 has the effect code value of 1 for e1 and 0 for the others. Those in group 2 have 1 for e2 and 0 otherwise, and for group 3 e3 equals 1 with 0 for the others. Observations in group 4 have all -1s on e1, e2 and e3. These three effect variables contain all of the information needed to determine which observations are included in which group. If you are in group 1 then e1 is equal to 1 while e2 and e3 are 0. Thus, each of the groups is defined by having a one of the effect variables equal to one except of one group which is all -1s. The group with all -1s is known as the reference group, which in our example is group 4. We will see exactly what this means after we look at the regression analysis results.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> F(3, 12) &#x3D; 76.00  P &#x3D; 0.0000  R-squared &#x3D; 0.95</span><br><span class="line"></span><br><span class="line">-------------------------------------------------</span><br><span class="line">       y |      Coef.   Std. Err.      t    P&gt;|t|</span><br><span class="line">---------+---------------------------------------</span><br><span class="line">      e1 |         -3   .3535534    -8.49   0.000</span><br><span class="line">      e2 |         -2   .3535534    -5.66   0.000</span><br><span class="line">      e3 |   2.36e-16   .3535534     0.00   1.000</span><br><span class="line">constant |          5   .2041241    24.49   0.000</span><br><span class="line">-------------------------------------------------</span><br></pre></td></tr></table></figure>
-
-<p>With effect coding the constant is equal to the grand mean of all of the observations. In this case, the value is equal to 5 which is the grand mean. The coefficients of each of the effect variables is equal to the difference between the mean of the group coded 1 and the grand mean. In our example the mean of group 1 is 2 and the difference of 2-5 is -3, which is the value of the regression coefficient for e1. The t-test associated with that coefficient is the test of group 1 versus the grand mean. The coefficient for e3 is 2.36e-16 which is just a computer rounding way of saying zero, i.e., 5-5 equals 0 give or take some rounding error.</p>
-<p>What if you used group 1 as the reference group? That is, what if group 1 was the group coded with all -1s? In that case, the value of the constant would still be the grand mean. The coefficients for e2 and e3 will have the same values, but the coefficients for e1 will be replaced by the coefficient for e4, the difference between the grand mean and group 4. In all other respects the models are identical with the same F-ratio and R-squared regardless of which group is selected as the reference group.</p>
-<h3 id="Unbalanced-data"><a href="#Unbalanced-data" class="headerlink" title="Unbalanced data"></a>Unbalanced data</h3><p>By unbalanced data we mean unequal group sizes. There are a couple of differences when using effect coding with unbalanced designs. Consider the following four group design:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">+-----------------------------------+</span><br><span class="line">| group |  g1  |  g2  |  g3  |  g4  |</span><br><span class="line">|-------|------+------+------+------|</span><br><span class="line">|       |   1  |      |      |  10  |</span><br><span class="line">|       |   3  |   3  |   6  |  10  |</span><br><span class="line">|       |   2  |   4  |      |   9  |</span><br><span class="line">|       |   2  |      |   5  |  11  |</span><br><span class="line">+-----------------------------------+</span><br><span class="line">| mean  |   2  |  3.5 |  5.5 |  10  |</span><br><span class="line">+-----------------------------------+</span><br><span class="line"></span><br><span class="line">Grand mean &#x3D; 5.5 -- Unweighted grand mean &#x3D; 5.25</span><br></pre></td></tr></table></figure>
-
-<p>In the table above, the grand mean (5.5) is the overall mean of the 12 observations while the unweighted grand mean (5.25) is just the simple average of the four group means.</p>
-<p>Now if we do the standard effect coding and run the regression we get the following summary table.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> F(3, 12) &#x3D; 73.60  P &#x3D; 0.0000  R-squared &#x3D; 0.965</span><br><span class="line"></span><br><span class="line">-------------------------------------------------</span><br><span class="line">       y |      Coef.   Std. Err.      t    P&gt;|t|</span><br><span class="line">---------+---------------------------------------</span><br><span class="line">      e1 |      -3.25   .369755     -8.79   0.000 </span><br><span class="line">      e2 |      -1.75   .4635124    -3.78   0.005 </span><br><span class="line">      e3 |        .25   .4635124     0.54   0.604 </span><br><span class="line">constant |       5.25   .2420615    21.69   0.000 </span><br><span class="line">-------------------------------------------------</span><br></pre></td></tr></table></figure>
-
-<p>Now the constant for the model is the unweighted grand mean, i.e., the mean of means. In all other respects the coefficients are interpreted in the way except that you replace grand mean with the term unweighted grand mean. Of course, what is really going on is that for balanced groups, the weighted and unweighted means are the same.</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ggudtav2w0j30qo096q41.jpg" alt="Screen Shot 2020-07-17 at 5.22.16 PM"></p>
-<h3 id="Why-use-effect-coding"><a href="#Why-use-effect-coding" class="headerlink" title="Why use effect coding?"></a>Why use effect coding?</h3><p>Here’s a good question, why use effect coding instead of dummy coding? If you have several categorical variables in a model it often doesn’t make much difference whether you use effect coding or dummy coding. However, if you have an interaction of two categorical variables then effect coding may provide some benefits. The primary benefit is that you get reasonable estimates of both the main effects and interaction using effect coding. With dummy coding the estimate of the interaction is fine but main effects are not “true” main effects but rather what are called simple effects, i.e., the effect of one variable at one level of the other variable. This is why most analysis of variance programs use some type of effect coding when estimating the various effects in an ANOVA model.</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">lineare modelle, effect coding, dummy coding</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/17/lineare-modelle-review-1/">show all >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-machine-learning-using-r-3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/14/machine-learning-using-r-3/">machine learning using r(3)</a>
-    </h1>
   
 
-        
-        <a href="/2020/07/14/machine-learning-using-r-3/" class="archive-article-date">
-  	<time datetime="2020-07-14T14:07:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Machine-Learning-methods-using-R-3"><a href="#Machine-Learning-methods-using-R-3" class="headerlink" title="Machine Learning methods using R(3)"></a>Machine Learning methods using R(3)</h1><h2 id="Unsupervised-Learning-in-R"><a href="#Unsupervised-Learning-in-R" class="headerlink" title="Unsupervised Learning in R"></a>Unsupervised Learning in R</h2><p>Types of machine learning:</p>
-<ul>
-<li><p>Unsupervised Learning </p>
-<p> Finding structure in unlabeled data</p>
-</li>
-<li><p>Supervised Learning</p>
-<p>Making Predictions based on labeled data</p>
-<p>Predictions like regression or classification </p>
-</li>
-<li><p>Reinforcement Learning(强化学习)</p>
-<p>Feed back in a real or synthetic environment</p>
-</li>
-</ul>
-<p>Unlabeled data vs Labeled data: Unlabeled data only has some data, but they are not named or classified.</p>
-<h4 id="Unsupervised-Learning"><a href="#Unsupervised-Learning" class="headerlink" title="Unsupervised Learning:"></a>Unsupervised Learning:</h4><p>Find patterns in the feature of the data</p>
-<p>Visualization of high dimensional data</p>
-<p>Pre-processing before supervised learning</p>
-<h4 id="K-means-clustering-Algorithm"><a href="#K-means-clustering-Algorithm" class="headerlink" title="K-means clustering Algorithm"></a>K-means clustering Algorithm</h4><p><code>kmeans(data,center = number of centers, nstart = attempts multiple intial configurations and reports on tht best one)</code></p>
-<p>Usually, we don’t know how many clusters do we need, so we will try each of them one by one and judge the goodness of them by minimum sum of squares.</p>
-<p><code>wss&lt;- 0</code></p>
-<p><code>for(i in 1:15){</code></p>
-<p><code>kmeans &lt;- kmeans(data, center = i, nstart = number)</code></p>
-<p><code>wss[i] &lt;- kmeans$tot.withinss</code></p>
-<p><code>}</code></p>
-<p><code>plot(1:15, wss, type = &quot;b&quot;, xlab =&quot;Number of Clusters&quot;, ylab = &quot;Within groups sum of squares&quot;)</code></p>
-<p>And find the elbow point.</p>
-<h3 id="Hierarchical-Clustering"><a href="#Hierarchical-Clustering" class="headerlink" title="Hierarchical Clustering"></a>Hierarchical Clustering</h3><p>Number of clusters is not known ahead of time</p>
-<p>Two kinds: bottom-up and top-down</p>
-<p>Top- down:</p>
-<p>Imagine we have 5 points, we will say that these 5 points are different 5 clusters, then we will merge the 2 clusters into one depending on its distance, and keep iterating the process….</p>
-<p><code>hclust(dist(x))</code></p>
-<p>draw a dendrogram</p>
-<p><code>plot(hclust.out)</code></p>
-<p><code>abline(h = 6, col = &quot;red&quot;)</code></p>
-<p>Tree cutting</p>
-<p><code>cutree(hclust.out,h =6)</code></p>
-<p><code>cutree(hclust.out, k =2)</code></p>
-<p>Pre-task:</p>
-<p>use <code>scale(x)</code> to scale the matrix data(normalization )</p>
-<h3 id="PCA-principle-component-analysis"><a href="#PCA-principle-component-analysis" class="headerlink" title="PCA(principle component analysis)"></a>PCA(principle component analysis)</h3><p>decrese the dimension of the data</p>
-<p><code>prcomp(data, scale = T/F, center = T/F)</code></p>
-<p>use <code>biplot(model)</code> to visualize the goodness of the model</p>
-<p>ScreePlot:</p>
-<p><code>var&lt;- model$sdev^2</code></p>
-<p><code>pve &lt;- var/sum(var)</code></p>
-<p><code>plot(ave,ylim = c(0,1), type = &quot;b&quot;)</code></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/14/machine-learning-using-r-3/">show all >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-machine-learning-using-r-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/13/machine-learning-using-r-2/">machine learning using r(2)</a>
-    </h1>
   
 
-        
-        <a href="/2020/07/13/machine-learning-using-r-2/" class="archive-article-date">
-  	<time datetime="2020-07-13T18:31:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Machine-Learning-method-using-R-2"><a href="#Machine-Learning-method-using-R-2" class="headerlink" title="Machine Learning method using R(2)"></a>Machine Learning method using R(2)</h2><h3 id="Regression-in-Machine-Learning"><a href="#Regression-in-Machine-Learning" class="headerlink" title="Regression in Machine Learning"></a>Regression in Machine Learning</h3><h5 id="What-is-Regression"><a href="#What-is-Regression" class="headerlink" title="What is Regression?"></a>What is Regression?</h5><p>How many units will we sell(Regression)</p>
-<p>Will this customer buy our product?(y/n) (Classification)</p>
-<p>What price will the customer pay for our product(Regression)</p>
-<h5 id="Use"><a href="#Use" class="headerlink" title="Use"></a>Use</h5><p><code>model &lt;- lm(formula = formula, data = data)</code></p>
-<p><code>formula = as.formula(&quot;y~x&quot;)</code></p>
-<h5 id="For-Situations-where-order-is-more-important-than-exact-values-the-gain-curve-helps-you-to-check-if-the-model’s-predictions-sort-in-the-same-order-as-the-true-outcome"><a href="#For-Situations-where-order-is-more-important-than-exact-values-the-gain-curve-helps-you-to-check-if-the-model’s-predictions-sort-in-the-same-order-as-the-true-outcome" class="headerlink" title="For Situations where order is more important than exact values, the gain curve helps you to check if the model’s predictions sort in the same order as the true outcome."></a>For Situations where order is more important than exact values, the gain curve helps you to check if the model’s predictions sort in the same order as the true outcome.</h5><p><code>GainCurvePlot(frame, xvar, truthvar, title)</code></p>
-<p>where <code>frame</code> is the data frame, <code>xvar</code> and <code>truthvar</code> are strings naming the prediction and actual outcome columns of frame, <code>title</code> is the title of the plot.</p>
-<h5 id="The-Residual-Plot"><a href="#The-Residual-Plot" class="headerlink" title="The Residual Plot"></a>The Residual Plot</h5><p><code>x$residuals &lt;- resid(x_model)</code></p>
-<p><code>ggplot(x,aes(predictions, residuals))</code></p>
-<h5 id="Root-Mean-Squared-Error-RMSE"><a href="#Root-Mean-Squared-Error-RMSE" class="headerlink" title="Root Mean Squared Error(RMSE)"></a>Root Mean Squared Error(RMSE)</h5><p>error = ypredict - yreal</p>
-<p>RMSE =sqrt(mean(error))</p>
-<p>We often use RMSE together with sd()</p>
-<p>when RMSE &lt; sd() =&gt; our model is better than simply the mean()</p>
-<h5 id="R-Squared-how-well-the-model-fits-or-explains-the-data"><a href="#R-Squared-how-well-the-model-fits-or-explains-the-data" class="headerlink" title="R Squared, how well the model fits or explains the data"></a>R Squared, how well the model fits or explains the data</h5><p>near 1 =&gt; Model fits well</p>
-<p>near 0=&gt; no better than guessing the average value</p>
-<p>R^2 &lt;- 1 - RSS/SST</p>
-<p>rss &lt;- sum(err^2)</p>
-<p>totert &lt;- y - mean(y)</p>
-<p>sstot &lt;- sum(totert ^2)</p>
-<p>r_squared = 1- rss/sstot</p>
-<p>R^2 = correlation ^2</p>
-<h5 id="Create-Cross-Validation-plan-交叉验证"><a href="#Create-Cross-Validation-plan-交叉验证" class="headerlink" title="Create Cross Validation plan(交叉验证)"></a>Create Cross Validation plan(交叉验证)</h5><p><code>library(vtreat)</code></p>
-<p><code>splitPlan &lt;- kWayCrossValidation(nRows, nSplits,NULL,NULL)</code></p>
-<p><code>nRows</code>: number of rows in the training data</p>
-<p><code>nSplits</code>: number folds in the cross-validation</p>
-<h6 id="Generate-the-training-and-test-data-set"><a href="#Generate-the-training-and-test-data-set" class="headerlink" title="Generate the training and test data set"></a>Generate the training and test data set</h6><p><code>N&lt;- nrow(data)</code> to get the number of rows in the data set</p>
-<p><code>gp &lt;- runif(N)</code> to generate vector of N uniform random unmbers,callled gp</p>
-<p><code>data_train &lt;-  data[gp&lt;0.75,]</code></p>
-<p><code>data_test &lt;- data[gp &gt;= 0.75,]</code></p>
-<h4 id="Deal-with-Categorical-Data"><a href="#Deal-with-Categorical-Data" class="headerlink" title="Deal with Categorical Data"></a>Deal with Categorical Data</h4><p><code>model_matrix &lt;- model.matrix(formula, data)</code></p>
-<p>which is used to convert categorical data into 1,0.</p>
-<h6 id="Interaction"><a href="#Interaction" class="headerlink" title="Interaction"></a>Interaction</h6><p>y~a:b a interacts with b</p>
-<p>y<del>a*b &lt;=&gt; y</del>a+b+a:b</p>
-<h5 id="Logistic-regression-to-predeict-probabilities"><a href="#Logistic-regression-to-predeict-probabilities" class="headerlink" title="Logistic regression to predeict probabilities"></a>Logistic regression to predeict probabilities</h5><p>Predicting whether an event occurs(y/n) : classification</p>
-<p>Predicting the probablity that an event occurs: Regression</p>
-<p>Standard Linear Regression: predicts values in[,]</p>
-<p>Probabilities: limited to [0,1] interval  =&gt; We use Logistic Regression!</p>
-<p><strong>Assumes inputs additive, linear in log-odds( 赔率）: log(p/(1-p))</strong></p>
-<p>Recommend to encode to outcome to 0/1 or FALSE/TRUE    </p>
-<p>To get the probabilities , use <strong>type = “response”</strong></p>
-<p>PseudoR^2 is used to judge whether the model good is.</p>
-<p><code>glance(model%&gt;% summarize(pR2 = 1 -deviance/null.deviance))</code> or <code>wrapChiSqTest()</code></p>
-<p>Use     <code>GainCurvePlot(data frame, the column predicted, the column with the real data, label )</code>to visualize the accuracy of the prediction</p>
-<h5 id="Poisson-Quasipoisson-Regression"><a href="#Poisson-Quasipoisson-Regression" class="headerlink" title="Poisson/Quasipoisson Regression"></a>Poisson/Quasipoisson Regression</h5><p>Assumes inputs additive and linear in log(count)</p>
-<p>Outcome : integer</p>
-<p>Poisson assumes that mean(y) = var(y)</p>
-<p>If var(y) much different from mean(y) - quasipoisson</p>
-<p>Generally requires a large data set</p>
-<p>use pseudoR^2 to check the goodness</p>
-<h4 id="GAMs-generalized-additive-models"><a href="#GAMs-generalized-additive-models" class="headerlink" title="GAMs(generalized additive models)"></a>GAMs(generalized additive models)</h4><p>We are sure that it is not a linear model, but we are not sure whether it is a quadratic, cubic or sth else.</p>
-<p><code>gam(formula, family, data)</code></p>
-<p>Family:</p>
-<p>Gaussian(default) :regular expression</p>
-<p>Binomial : probabilities</p>
-<p>Poisson/quasipoisson : counts(计数)</p>
-<p>Likely to overfit: Best for large data sets</p>
-<p>Use s() function to specify there is no lineare zusammenhang</p>
-<p>Best to use when you don’t have specific domain knowledge .</p>
-<h3 id="The-intuition-behind-the-decision-tree"><a href="#The-intuition-behind-the-decision-tree" class="headerlink" title="The intuition behind the decision tree"></a>The intuition behind the decision tree</h3><h5 id="Random-Forest"><a href="#Random-Forest" class="headerlink" title="Random Forest:"></a>Random Forest:</h5><p>Mutiple diverse decision trees averaged together </p>
-<p>  *Reduces overfit</p>
-<ul>
-<li>Increases model expressiveness</li>
-<li>Finer gain predictions</li>
-</ul>
-<p>`model &lt;- ranger(fmla, data, num.trees = (usually &gt;200), respect.unordered.factors = “order”)</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">machine learning, R</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/13/machine-learning-using-r-2/">show all >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-machine-learning-method-in-R" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/12/machine-learning-method-in-R/">machine learning method in R</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/12/machine-learning-method-in-R/" class="archive-article-date">
-  	<time datetime="2020-07-12T12:38:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Machine-Learning-method-using-R-1"><a href="#Machine-Learning-method-using-R-1" class="headerlink" title="Machine Learning method using R (1)"></a>Machine Learning method using R (1)</h2><p>I would summarize the popular machine learning methods and their realizations in R here</p>
-<h3 id="Supervised-Learning-Classification"><a href="#Supervised-Learning-Classification" class="headerlink" title="Supervised Learning , Classification"></a>Supervised Learning , Classification</h3><h4 id="Decision-Tree"><a href="#Decision-Tree" class="headerlink" title="Decision Tree:"></a>Decision Tree:</h4><p>load rpart library:     <code>library(rpart)</code></p>
-<p>model it: <code>model&lt;- rpart(outcome~loan +...,method = &quot;class&quot;)</code></p>
-<p>predict it:<code>predict(model, test_data, type = &quot;class&quot;)</code></p>
-<p>plot it: load rpart.plot library <code>rpart.plot(model)</code></p>
-<p>Divide the whole data set into Train and Test data:</p>
-<p><code>nrow(data)</code></p>
-<p><code>sample_rows &lt;- sample(nrow(), 75%nrow())</code></p>
-<p><code>data_train&lt;- data[sample_rows,]</code></p>
-<p><code>data_test &lt;- data[-sample_rows,]</code></p>
-<p>Use <code>rpart.control(maxdepth = , minsplit =)</code> to prune the trees and to decrease its complexity(Pre pruning)</p>
-<p>Use <code>plotcp(model)</code></p>
-<pre><code>`m_pruned&lt;- prune(m,cp =0.20)` (Post pruning)</code></pre><h4 id="KNN-k-nearest-neighbors"><a href="#KNN-k-nearest-neighbors" class="headerlink" title="KNN k-nearest neighbors"></a>KNN k-nearest neighbors</h4><p>have no connection with k means!</p>
-<p><code>library(class)</code></p>
-<p><code>pred &lt;- knn(trainingdata, testing_data, training_labels)</code></p>
-<h4 id="Naive-Bayes"><a href="#Naive-Bayes" class="headerlink" title="Naive Bayes"></a>Naive Bayes</h4><p><code>library(naivebayes)</code></p>
-<p><code>model &lt;- naive_bayes(location~time_of_the_day, data = location_history)</code></p>
-<p><code>future &lt;- predict(model, future_conditions)</code></p>
-<h4 id="Binary-predictions-with-regressions-logistic-regression"><a href="#Binary-predictions-with-regressions-logistic-regression" class="headerlink" title="Binary predictions with regressions (logistic regression)"></a>Binary predictions with regressions (logistic regression)</h4><p>For binary regression(contains only 0 or 1)</p>
-<p>We use a curve to model the model.</p>
-<p><code>model &lt;- glm(y~x1+x2+x3,data = data, family = &quot;binomial&quot;)</code></p>
-<p><code>prob&lt;- predict(model, test_dataset, type =&quot;response&quot;)</code></p>
-<h6 id="ROC-curves"><a href="#ROC-curves" class="headerlink" title="ROC curves"></a>ROC curves</h6><h6 id="library-ROC"><a href="#library-ROC" class="headerlink" title="library(ROC)"></a><code>library(ROC)</code></h6><p><code>ROC &lt;- roc(realdata, data_predicted)</code></p>
-<p><code>plot(ROC)</code></p>
-<p><code>auc(ROC)</code></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">machine learning, R</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/12/machine-learning-method-in-R/">show all >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-daily-review-03-07-2020" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/04/daily-review-03-07-2020/">daily-review-03-07-2020</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/04/daily-review-03-07-2020/" class="archive-article-date">
-  	<time datetime="2020-07-04T09:46:48.911Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>title: daily review 03.07.2020<br>date: 2020-07-04 11:43:01<br>tags:daily review<br>–</p>
-<h1 id="Informatik"><a href="#Informatik" class="headerlink" title="Informatik"></a>Informatik</h1><h3 id="Difference-between-Local-Suche-and-Classic-Suche"><a href="#Difference-between-Local-Suche-and-Classic-Suche" class="headerlink" title="Difference between Local Suche and Classic Suche"></a>Difference between Local Suche and Classic Suche</h3><h5 id="Local-Suche"><a href="#Local-Suche" class="headerlink" title="Local Suche"></a>Local Suche</h5><p>Start Zustand: Nothing, just the initial beginning. For example, An empty board.</p>
-<p>Nachfolgerfunktion:Change the current state, When there is no conficts exist, when yes, deleted the last step(Backtracking) and take the state with the possible state with no conflicts.</p>
-<h5 id="Classic-Suche"><a href="#Classic-Suche" class="headerlink" title="Classic Suche"></a>Classic Suche</h5><p>Start Zustand: The board is already full. Our goal is to change the pieces on the board to make the situation better. For example, if one piece has been moved to meet the requirement, then is the situation better and the “conflicts rate” will minus one</p>
-<p>Nachfolgefunktion: For example, if one piece has been moved to meet the requirement, then is the situation better and the “conflicts rate” will minus one -&gt; Good move! Take it and take this state as the current state and do the iteration.</p>
-<h1 id="Statistik"><a href="#Statistik" class="headerlink" title="Statistik"></a>Statistik</h1><h3 id="Cleaning-Data-using-R"><a href="#Cleaning-Data-using-R" class="headerlink" title="Cleaning Data using R"></a>Cleaning Data using R</h3><p>use <code>glimpse</code> to see have a general overview of the data</p>
-<p>use <code>is.factor()</code> and similar method to see if it is the type we wish.</p>
-<p>If not we may use <code>as.factor()</code> or similar method to change the type to our desired types</p>
-<p>Bemerkung:</p>
-<p>When converting Factor to a Numeric value, we may first convert it into characters     <code>as.numeric(as.character())</code></p>
-<p>Use <code>assert_all_are_in_past()</code> on Date type to make sure all rides are in the past</p>
-<h5 id="How-to-handle-duplicate-errors"><a href="#How-to-handle-duplicate-errors" class="headerlink" title="How to handle duplicate errors"></a>How to handle duplicate errors</h5><p>use <code>duplicated()</code> to find the duplicated data</p>
-<p>use <code>filter(col, duplicated())</code> to see the duplicated data</p>
-<p>Use <code>distinct(,.keep_all = TRUE)</code> to drop partial duplicates</p>
-<h5 id="Remove-a-col-from-the-dataset"><a href="#Remove-a-col-from-the-dataset" class="headerlink" title="Remove a col from the dataset"></a>Remove a col from the dataset</h5><p>Remove a column: <code>select(-&quot;colomn name&quot;)</code></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/04/daily-review-03-07-2020/">show all >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-daily-review-01-07-2020" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/01/daily-review-01-07-2020/">daily-review-01-07-2020</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/01/daily-review-01-07-2020/" class="archive-article-date">
-  	<time datetime="2020-07-01T19:29:43.754Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>title: daily review 01.07.2020<br>date: 2020-07-01 21:28:41<br>tags:<br>–</p>
-<h2 id="Informatik"><a href="#Informatik" class="headerlink" title="Informatik"></a>Informatik</h2><p>I watched some FSV video today which is about the DPLL Algotithm. It is related to the AussagenLogik. But what it is all about may need some further study…</p>
-<p>A great news is, with the instruction from Github, i now successfully connect the github website to my own domain! So welcome to bobyuan.com !</p>
-<h2 id="Statistik"><a href="#Statistik" class="headerlink" title="Statistik"></a>Statistik</h2><p>I have learnt some R today, which is mainly about importing data</p>
-<h4 id="Instructions-of-loading-a-data-base-in-R"><a href="#Instructions-of-loading-a-data-base-in-R" class="headerlink" title="Instructions of loading a data base in R:"></a>Instructions of loading a data base in R:</h4><p>library(DBI)</p>
-<p>data &lt;-dbConnect(RMySQL :: MySQL()</p>
-<p>​                    dbname =”hi”</p>
-<p>​                    host =””</p>
-<p>​                    port = “”</p>
-<p>​                    user = “”</p>
-<p>​                 password =””            </p>
-<p>)</p>
-<p>With the code above we will connect with the MySQL database <code>hi</code></p>
-<h4 id="Use-SQL-Befehl-to-make-request-from-the-DataBase"><a href="#Use-SQL-Befehl-to-make-request-from-the-DataBase" class="headerlink" title="Use SQL Befehl to make request from the DataBase"></a>Use SQL Befehl to make request from the DataBase</h4><p>Then use <code>dbListTable()</code> to list all the table from the Database</p>
-<p>​        use <code>dbReadTable(data,&quot;&quot;)</code> to read the table</p>
-<p>To get query , simply use <code>dbGetQuery(data, (SQL BEFEHL))</code>. It was so surprised that i used SQL again after Datenbankstruktur!</p>
-<p>If the data you want has a lot and could not load in one time, you may use <code>dbSendQuery()</code> to send the request and use <code>dbFetch(, n =?)</code> to fetch the data with the n information at one time. When finished, use <code>dbClearResult()</code></p>
-<p>to disconnect the database, use <code>dbDisconnect()</code></p>
-<h4 id="Import-data-from-JSON"><a href="#Import-data-from-JSON" class="headerlink" title="Import data from JSON"></a>Import data from JSON</h4><p>import data from JSON format: fromJSON(“url”)</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/01/daily-review-01-07-2020/">show all >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-daily-review-30-06-2020" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/30/daily-review-30-06-2020/">daily-review-30-06-2020</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/30/daily-review-30-06-2020/" class="archive-article-date">
-  	<time datetime="2020-06-30T16:16:43.580Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>title: daily review 30.06.2020<br>date: 2020-06-30 18:08:05<br>tags: daily review<br>–<br>I have finished the Intelligente System Hausarbeit today and have created my own domain bobyuan.com on AliCloud, which has not been put into use yet because of some technical Stoerung and i will realize it asap</p>
-<h2 id="Informatik-field"><a href="#Informatik-field" class="headerlink" title="Informatik field:"></a>Informatik field:</h2><h4 id="Local-Beam-Search"><a href="#Local-Beam-Search" class="headerlink" title="Local Beam Search:"></a>Local Beam Search:</h4><p>I reviewed the local beam search today. it is a lokale Suche and the basic idea is to find all the neighbor from the current state, and test, if the state value from the best-neighbor better than the current situation is. If yes, then take the top k-best neighbor and iterating the process above. The algorithm terminates when the state value from the neighbor is not better than the state value of the current state.</p>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ggarrfxwfqj315l0ls7ic.jpg" alt="IMG_AFAC9EF66F63-1" style="zoom:60%;" />
-
-
-<p>The picture above is the pseudo code from the Folie.</p>
-<h3 id="Simulated-Annealing"><a href="#Simulated-Annealing" class="headerlink" title="Simulated Annealing"></a>Simulated Annealing</h3><p>I also reviewed the simulated annealing algorithm . The basic idea of that algorithm is that it simulates the annealing process on physics, which means if here comes a locale Maxima, there will be a certain probability that Algo rejected and move forward. Thus makes it possible to find the global maximum. The following snapshot shows its algorithm, which is also cut from the folien.</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ggarrs2od2j315o0lok5j.jpg" alt="IMG_6B5CF0F491A3-1"></p>
-<h4 id="Hypothesis-What-if-we-combine-the-local-beam-search-and-simulated-annealing-would-it-be-more-accurate-to-find-globale-maximum-The-pseudo-code-below"><a href="#Hypothesis-What-if-we-combine-the-local-beam-search-and-simulated-annealing-would-it-be-more-accurate-to-find-globale-maximum-The-pseudo-code-below" class="headerlink" title="Hypothesis: What if we combine the local beam search and simulated annealing? would it be more accurate to find globale maximum?  The pseudo code below:"></a>Hypothesis: What if we combine the local beam search and simulated annealing? would it be more accurate to find globale maximum?  The pseudo code below:</h4><p>function Beam_Annealing return a solution state:</p>
-<p>​    Inputs: <code>problem</code>, a problem</p>
-<p>​                <code>schedule</code>, a mapping from time to “temperature”</p>
-<p>​                <code>k</code>: the number of best neighbors which will be used in the local beam search</p>
-<p>​    local variables :<code>current</code>,current state</p>
-<p>​                                <code>next</code>, next state</p>
-<p>​    <code>k</code> current states &lt;- intitialize the problem with k starting state.</p>
-<p>​    <code>max_value</code> &lt;- unendlich gross</p>
-<p>​    loop_do :</p>
-<p>​     loop throuth each beam in <code>k</code> current state </p>
-<p>​     add successors for each beam to neighbors</p>
-<p>​    if (<code>max_neighborsvalue</code> <strong>&lt;=</strong> <code>max_value</code>)  then </p>
-<p>​        <strong>return</strong> member of k-current state with highes fitness</p>
-<p>​         else  <code>k-current states</code> &lt;- top k values in neighbors</p>
-<p>​        <code>max_value</code> &lt;- <code>max_value</code>                                      only with probability <code>e^(delta_E/T)</code></p>
-<p>​    else </p>
-<p>​        <code>k-current state</code> &lt;- top k values in neighbors</p>
-<p>​        <code>max_value</code>  &lt;- <code>max_neighborsvalue</code></p>
-<p>I have no idea whether it would optimize the original algorithm or not. To prove that i may need further investigation.</p>
-<p>Besides, i also read a very interesting article in <a href=""https://www.zhihu.com/question/54356960"">Zhihu</a>, which illustrates the beam search pretty well.</p>
-<h3 id="How-to-create-my-own-website"><a href="#How-to-create-my-own-website" class="headerlink" title="How to create my own website"></a>How to create my own website</h3><p>I created my own website named <a href="http://www.bobyuan.com" target="_blank" rel="noopener">bobyuan.com</a>, which cannot been used yet and i will test it in the following days. I will now record the steps of creating the website here.</p>
-<p>First create the own blog using texo or whatever you like and linked it with Github. And then you need to buy a domain. I bought it on the <a href=""https://www.alibabacloud.com/zh"">alibabacloud</a>, which is very simple. And after that, you need to create a CNAME document on Github which contains simply the domain name you have registered. For me, mine is “bobyuan.com”. I read some further instruction on ZhiHu, but up till now it is still not connected with my GitHub website yet so i would not write the instruction here. But i do got an official instruction from <a href=""https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site"">GitHub</a>, i may take a look at it when things don’t change tomorrow.</p>
-<h2 id="Statistik-field"><a href="#Statistik-field" class="headerlink" title="Statistik field:"></a>Statistik field:</h2><p>Leider habe ich gar heute gar keine Statistik gelernt, deswegen.. keinen Fortschritt.</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/30/daily-review-30-06-2020/">show all >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-daily-review-29-06-2020" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/29/daily-review-29-06-2020/">daily-review-29-06-2020</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/29/daily-review-29-06-2020/" class="archive-article-date">
-  	<time datetime="2020-06-29T17:11:43.197Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>title: daily review 29.06.2020<br>date: 2020-06-29 19:06:20<br>tags:</p>
-<h1 id="The-first-day-a-new-start"><a href="#The-first-day-a-new-start" class="headerlink" title="The first day, a new start"></a>The first day, a new start</h1><p>Hey, this is my first day here.</p>
-<p>I would from now on share my daily review on here, which is aimed to show you what i have learnt today and also any interesting topic i have witnessed or have read. </p>
-<p>I am currently a student who study computer science so i will mainly focus on the informatic field and statistics field.</p>
-<h2 id="Informatik-field"><a href="#Informatik-field" class="headerlink" title="Informatik field:"></a>Informatik field:</h2><h4 id="Learn-how-to-establishing-personal-blog-via-TEXO"><a href="#Learn-how-to-establishing-personal-blog-via-TEXO" class="headerlink" title="Learn how to establishing personal blog via TEXO"></a>Learn how to establishing personal blog via TEXO</h4><p>With the help of a YouTuber <a href="https://www.youtube.com/channel/UC9PZ_j30JhfgjOrJZAtYzRw" target="_blank" rel="noopener">CodeSheep</a>,  I have established my personal blog. I will review the technical points here.</p>
-<p>First download <a href="https://nodejs.org/en/" target="_blank" rel="noopener">nodejs</a>, and then use the terminal to install texo, after that connect the local server to the cloud via github. We can also change the theme of our blog manually or simply get some template from github. </p>
-<p>There is still some point that i need to optimize in the future like some hyperlink is useless that need to be deleted and there are still some parameters that need to be set up.</p>
-<h3 id="Writing-the-blog-using-Typora"><a href="#Writing-the-blog-using-Typora" class="headerlink" title="Writing the blog using Typora"></a>Writing the blog using Typora</h3><p>To write the blog, i found a very useful tool <a href="https://typora.io" target="_blank" rel="noopener">typora</a>, it is a pretty user-friendly tool to help me to write. I would strongly recommend it to those who are not familiar with MarkDown Language. Pretty useful. It would translate your text to md style automatically and all you need to do is to type and follow the instructions on the sidebar.</p>
-<p>To write a blog, you will need to write down what you want to write in typora and then copy paste to the md file cause the original .md file is locked and could not be modified. Sounds a little complicated but it is not that hard to realize.</p>
-<h2 id="Statistik-field"><a href="#Statistik-field" class="headerlink" title="Statistik field:"></a>Statistik field:</h2><h3 id="The-definition-of-covariance-and-covariancematrix"><a href="#The-definition-of-covariance-and-covariancematrix" class="headerlink" title="The definition of covariance and covariancematrix"></a>The definition of covariance and covariancematrix</h3><p>I am still struglling in the definition of some basic statistical expression. </p>
-<p>The covariance is aimed to measure the similarity of two  variables, while the variance is aimed to measure the “distribution” of one single varible in different Beobachtungen(observation).</p>
-<p> i found an explanation on Zhihu and find it very illustrative and useful: <a href="https://zhuanlan.zhihu.com/p/37609917" target="_blank" rel="noopener">LinkHere</a> </p>
-<p>The variance consists of the elements from the diag() of the covariance matrix and the covariance consists of the element beside the diag() of the covariance matrix.</p>
-<h3 id="Weighted-KQ-Schaetzer-and-Verallgemeinter-KQ-Schaetzer"><a href="#Weighted-KQ-Schaetzer-and-Verallgemeinter-KQ-Schaetzer" class="headerlink" title="Weighted KQ Schaetzer and Verallgemeinter KQ Schaetzer"></a>Weighted KQ Schaetzer and Verallgemeinter KQ Schaetzer</h3><p>What is the different between unweighted, weighted and verallgemeinter KQ schaetzer?</p>
-<p>Here is the explanation: <a href="https://www.zhihu.com/question/37930145" target="_blank" rel="noopener">linkhere</a> from ZhiHu</p>
-<p>Let’s suppose you are using a ruler to measure the length of an object,</p>
-<h5 id="unweighted-KQ"><a href="#unweighted-KQ" class="headerlink" title="unweighted KQ:"></a>unweighted KQ:</h5><p> using the same ruler all the time, there exists some error -&gt; the dia() of covariance matrix remains the same while other elements are 0.</p>
-<h5 id="Weighted-KQ"><a href="#Weighted-KQ" class="headerlink" title="Weighted KQ:"></a>Weighted KQ:</h5><p>using different ruler tp measure the length, the Messungsfehler + the error caused by different rulers -&gt; the dia() of the covariance matrix is diiferent while other elements in the covariance matrix remains the same.</p>
-<h5 id="Verallgemeinte-KQ"><a href="#Verallgemeinte-KQ" class="headerlink" title="Verallgemeinte KQ:"></a>Verallgemeinte KQ:</h5><p>using different rulers to measure, with other influence variable. -&gt; covariance matrix with full rank(voller Rang)</p>
-<h3 id="The-definition-of-the-Heteroscedasticity-异方差性"><a href="#The-definition-of-the-Heteroscedasticity-异方差性" class="headerlink" title="The definition of the Heteroscedasticity 异方差性"></a>The definition of the Heteroscedasticity 异方差性</h3><p>The variance of the Storterm in the lineare Modelle Var(Ei) is not the same =&gt; Var(E1) != invariant || Var(E1) != Var(E2)</p>
-<p>When the requirement above met, then we would say that the LM is heteroscedastic.</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/29/daily-review-29-06-2020/">show all >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-my-first-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/29/my-first-blog/">my first blog</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/29/my-first-blog/" class="archive-article-date">
-  	<time datetime="2020-06-29T12:32:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/29/my-first-blog/">show all >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -1271,8 +498,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
