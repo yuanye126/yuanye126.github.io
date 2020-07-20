@@ -6,19 +6,36 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>machine learning using r(3) | Hexo</title>
+  <title>lineare modelle review(2) | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Machine Learning methods using R(3)Unsupervised Learning in RTypes of machine learning:  Unsupervised Learning   Finding structure in unlabeled data  Supervised Learning Making Predictions based on la">
+  <meta name="description" content="The interpretation of basic lm using RRetweet from: linear regression  前言 在我们的日常生活中，存在大量的具有相关性的事件，比如大气压和海拔高度，海拔越高大气压强越小；人的身高和体重，普遍来看越高的人体重也越重。还有一些可能存在相关性的事件，比如知识水平越高的人，收入水平越高；市场化的国家经济越好，则货币越强势，反而全球经济危">
 <meta property="og:type" content="article">
-<meta property="og:title" content="machine learning using r(3)">
-<meta property="og:url" content="http://yoursite.com/2020/07/14/machine-learning-using-r-3/index.html">
+<meta property="og:title" content="lineare modelle review(2)">
+<meta property="og:url" content="http://yoursite.com/2020/07/19/lineare-modelle-review-2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Machine Learning methods using R(3)Unsupervised Learning in RTypes of machine learning:  Unsupervised Learning   Finding structure in unlabeled data  Supervised Learning Making Predictions based on la">
+<meta property="og:description" content="The interpretation of basic lm using RRetweet from: linear regression  前言 在我们的日常生活中，存在大量的具有相关性的事件，比如大气压和海拔高度，海拔越高大气压强越小；人的身高和体重，普遍来看越高的人体重也越重。还有一些可能存在相关性的事件，比如知识水平越高的人，收入水平越高；市场化的国家经济越好，则货币越强势，反而全球经济危">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-14T14:07:49.000Z">
-<meta property="article:modified_time" content="2020-07-14T14:08:41.175Z">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/reg.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/01.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/reg2.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/reg3.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/reg4.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/02.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/09.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/04.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/05.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/06.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/07.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/08.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/reg5.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/reg6.png">
+<meta property="og:image" content="http://blog.fens.me/wp-content/uploads/2016/07/03.png">
+<meta property="article:published_time" content="2020-07-19T10:55:34.000Z">
+<meta property="article:modified_time" content="2020-07-20T14:54:39.209Z">
 <meta property="article:author" content="Ye Yuan">
+<meta property="article:tag" content="R LM P-test F-test">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://blog.fens.me/wp-content/uploads/2016/07/reg.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,72 +167,176 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-machine-learning-using-r-3" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-lineare-modelle-review-2" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      machine learning using r(3)
+      lineare modelle review(2)
     </h1>
   
 
         
-        <a href="/2020/07/14/machine-learning-using-r-3/" class="archive-article-date">
-  	<time datetime="2020-07-14T14:07:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
+        <a href="/2020/07/19/lineare-modelle-review-2/" class="archive-article-date">
+  	<time datetime="2020-07-19T10:55:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Machine-Learning-methods-using-R-3"><a href="#Machine-Learning-methods-using-R-3" class="headerlink" title="Machine Learning methods using R(3)"></a>Machine Learning methods using R(3)</h1><h2 id="Unsupervised-Learning-in-R"><a href="#Unsupervised-Learning-in-R" class="headerlink" title="Unsupervised Learning in R"></a>Unsupervised Learning in R</h2><p>Types of machine learning:</p>
+        <h1 id="The-interpretation-of-basic-lm-using-R"><a href="#The-interpretation-of-basic-lm-using-R" class="headerlink" title="The interpretation of basic lm using R"></a>The interpretation of basic lm using R</h1><p>Retweet from: <a href="http://blog.fens.me/r-linear-regression/" target="_blank" rel="noopener">linear regression</a> </p>
+<p><strong>前言</strong></p>
+<p>在我们的日常生活中，存在大量的<strong>具有相关性的事件</strong>，比如大气压和海拔高度，海拔越高大气压强越小；人的身高和体重，普遍来看越高的人体重也越重。还有一些可能存在相关性的事件，比如知识水平越高的人，收入水平越高；市场化的国家经济越好，则货币越强势，反而全球经济危机，黄金等避险资产越走强。</p>
+<p>如果我们要研究这些事件，<strong>找到不同变量之间的关系，我们就会用到回归分析</strong>。一元线性回归分析是处理两个变量之间关系的最简单模型，是两个变量之间的线性相关关系。让我们一起发现生活中的规律吧。</p>
+<p>由于本文为非统计的专业文章，所以当出现与教课书不符的描述，请以教课书为准。本文力求用简化的语言，来介绍一元线性回归的知识，同时配合R语言的实现。</p>
+<p><strong>目录</strong></p>
+<ol>
+<li><strong>一元线性回归介绍</strong></li>
+<li><strong>数据集和数学模型</strong></li>
+<li><strong>回归参数估计</strong></li>
+<li><strong>回归方程的显著性检验</strong></li>
+<li><strong>残差分析和异常点检测</strong></li>
+<li><strong>模型预测</strong></li>
+</ol>
+<h2 id="1-一元线性回归介绍"><a href="#1-一元线性回归介绍" class="headerlink" title="1. 一元线性回归介绍"></a>1. 一元线性回归介绍</h2><p>回归分析（Regression Analysis)是用来确定2个或2个以上变量间关系的一种统计分析方法。如果回归分析中，只包括一个自变量X和一个因变量Y时，且它们的关系是线性的，那么这种回归分析称为一元线性回归分析。</p>
+<p>回归分析属于统计学的基本模型，涉及统计学基础，就会有一大堆的名词和知识点需要介绍。</p>
+<p>在回归分析中，变量有2类：因变量 和 自变量。因变量通常是指实际问题中所关心的指标，用Y表示。而自变量是影响因变量取值的一个变量，用X表示，如果有多个自变量则表示为X1, X2, …, Xn。</p>
+<p><strong>回归分析研究的主要步骤：</strong></p>
+<ol>
+<li><strong>确定因变量Y 与 自变量X1, X2, …, Xn 之间的定量关系表达式，即回归方程。</strong></li>
+<li><strong>对回归方程的置信度检查。</strong></li>
+<li><strong>判断自变量Xn(n=1,2,…,m)对因变量的影响。</strong></li>
+<li><strong>利用回归方程进行预测。</strong></li>
+</ol>
+<p>本文会根据回归分析的的主要步骤，进行结构梳理，介绍一元线性回归模型的使用方法。</p>
+<p><a href="http://blog.fens.me/wp-content/uploads/2016/07/reg.png" target="_blank" rel="noopener"><img src="http://blog.fens.me/wp-content/uploads/2016/07/reg.png" alt="reg"></a></p>
+<h2 id="2-数据集和数学模型"><a href="#2-数据集和数学模型" class="headerlink" title="2. 数据集和数学模型"></a>2. 数据集和数学模型</h2><p>先让我们通过一个例子开始吧，用一组简单的数据来说明一元线性回归分析的数学模型的原理和公式。找出下面数据集中Y与X的定量关系。</p>
+<p>数据集为2016年3月1日，白天开盘的交易数据，为锌的2个期货合约的分钟线的价格数据。数据集包括有3列，索引列为时间，zn1.Close为ZN1604合约的1分钟线的报价数据，zn2.Close为ZN1605合约的1分钟线的报价数据。</p>
+<p>数据集如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">                    zn1.Close zn2.Close</span><br><span class="line">2016-03-01 09:01:00     14075     14145</span><br><span class="line">2016-03-01 09:02:00     14095     14160</span><br><span class="line">2016-03-01 09:03:00     14095     14160</span><br><span class="line">2016-03-01 09:04:00     14095     14165</span><br><span class="line">2016-03-01 09:05:00     14120     14190</span><br><span class="line">2016-03-01 09:06:00     14115     14180</span><br><span class="line">2016-03-01 09:07:00     14110     14170</span><br><span class="line">2016-03-01 09:08:00     14110     14175</span><br><span class="line">2016-03-01 09:09:00     14105     14170</span><br><span class="line">2016-03-01 09:10:00     14105     14170</span><br><span class="line">2016-03-01 09:11:00     14120     14180</span><br><span class="line">2016-03-01 09:12:00     14105     14170</span><br><span class="line">2016-03-01 09:13:00     14105     14170</span><br><span class="line">2016-03-01 09:14:00     14110     14175</span><br><span class="line">2016-03-01 09:15:00     14105     14175</span><br><span class="line">2016-03-01 09:16:00     14120     14185</span><br><span class="line">2016-03-01 09:17:00     14125     14190</span><br><span class="line">2016-03-01 09:18:00     14115     14185</span><br><span class="line">2016-03-01 09:19:00     14135     14195</span><br><span class="line">2016-03-01 09:20:00     14125     14190</span><br><span class="line">2016-03-01 09:21:00     14135     14205</span><br><span class="line">2016-03-01 09:22:00     14140     14210</span><br><span class="line">2016-03-01 09:23:00     14140     14200</span><br><span class="line">2016-03-01 09:24:00     14135     14205</span><br><span class="line">2016-03-01 09:25:00     14140     14205</span><br><span class="line">2016-03-01 09:26:00     14135     14205</span><br><span class="line">2016-03-01 09:27:00     14130     14205</span><br></pre></td></tr></table></figure>
+
+<p>我们以zn1.Close列的价格为X，zn2.Close列的价格为Y，那么试试找到自变量X和因变量Y的关系的表达式。</p>
+<p>为了直观起见，我们可以<strong>先画出一张散点图，以X为横坐标，Y为纵坐标，每个点对应一个X和一个Y</strong>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># 数据集已存在df变量中</span><br><span class="line">&gt; head(df)</span><br><span class="line">                    zn1.Close zn2.Close</span><br><span class="line">2016-03-01 09:01:00     14075     14145</span><br><span class="line">2016-03-01 09:02:00     14095     14160</span><br><span class="line">2016-03-01 09:03:00     14095     14160</span><br><span class="line">2016-03-01 09:04:00     14095     14165</span><br><span class="line">2016-03-01 09:05:00     14120     14190</span><br><span class="line">2016-03-01 09:06:00     14115     14180</span><br><span class="line"></span><br><span class="line"># 分别给x,y赋值</span><br><span class="line">&gt; x&lt;-as.numeric(df[,1])</span><br><span class="line">&gt; y&lt;-as.numeric(df[,2])</span><br><span class="line"></span><br><span class="line"># 画图</span><br><span class="line">&gt; plot(y~x+1)</span><br></pre></td></tr></table></figure>
+
+<p><a href="http://blog.fens.me/wp-content/uploads/2016/07/01.png" target="_blank" rel="noopener"><img src="http://blog.fens.me/wp-content/uploads/2016/07/01.png" alt="01"></a></p>
+<p>从散点图上发现 X和Y 的排列基本是在一条直线附近，那么我们可以假设X和Y的关系是线性，可以用公式表式为。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Y &#x3D; a + b * X + c</span><br></pre></td></tr></table></figure>
+
 <ul>
-<li><p>Unsupervised Learning </p>
-<p> Finding structure in unlabeled data</p>
-</li>
-<li><p>Supervised Learning</p>
-<p>Making Predictions based on labeled data</p>
-<p>Predictions like regression or classification </p>
-</li>
-<li><p>Reinforcement Learning(强化学习)</p>
-<p>Feed back in a real or synthetic environment</p>
-</li>
+<li>Y，为因变量</li>
+<li>X，为自变量</li>
+<li>a，为截距</li>
+<li>b，为自变量系数</li>
+<li>a+b*X, 表示Y随X的变化而线性变化的部分</li>
+<li>c, 为残差或随机误差，是其他一切不确定因素影响的总和，其值不可观测。假定c是符合均值为0方差为σ^2的正态分布 ，记作c~N(0,σ^2)</li>
 </ul>
-<p>Unlabeled data vs Labeled data: Unlabeled data only has some data, but they are not named or classified.</p>
-<h4 id="Unsupervised-Learning"><a href="#Unsupervised-Learning" class="headerlink" title="Unsupervised Learning:"></a>Unsupervised Learning:</h4><p>Find patterns in the feature of the data</p>
-<p>Visualization of high dimensional data</p>
-<p>Pre-processing before supervised learning</p>
-<h4 id="K-means-clustering-Algorithm"><a href="#K-means-clustering-Algorithm" class="headerlink" title="K-means clustering Algorithm"></a>K-means clustering Algorithm</h4><p><code>kmeans(data,center = number of centers, nstart = attempts multiple intial configurations and reports on tht best one)</code></p>
-<p>Usually, we don’t know how many clusters do we need, so we will try each of them one by one and judge the goodness of them by minimum sum of squares.</p>
-<p><code>wss&lt;- 0</code></p>
-<p><code>for(i in 1:15){</code></p>
-<p><code>kmeans &lt;- kmeans(data, center = i, nstart = number)</code></p>
-<p><code>wss[i] &lt;- kmeans$tot.withinss</code></p>
-<p><code>}</code></p>
-<p><code>plot(1:15, wss, type = &quot;b&quot;, xlab =&quot;Number of Clusters&quot;, ylab = &quot;Within groups sum of squares&quot;)</code></p>
-<p>And find the elbow point.</p>
-<h3 id="Hierarchical-Clustering"><a href="#Hierarchical-Clustering" class="headerlink" title="Hierarchical Clustering"></a>Hierarchical Clustering</h3><p>Number of clusters is not known ahead of time</p>
-<p>Two kinds: bottom-up and top-down</p>
-<p>Top- down:</p>
-<p>Imagine we have 5 points, we will say that these 5 points are different 5 clusters, then we will merge the 2 clusters into one depending on its distance, and keep iterating the process….</p>
-<p><code>hclust(dist(x))</code></p>
-<p>draw a dendrogram</p>
-<p><code>plot(hclust.out)</code></p>
-<p><code>abline(h = 6, col = &quot;red&quot;)</code></p>
-<p>Tree cutting</p>
-<p><code>cutree(hclust.out,h =6)</code></p>
-<p><code>cutree(hclust.out, k =2)</code></p>
-<p>Pre-task:</p>
-<p>use <code>scale(x)</code> to scale the matrix data(normalization )</p>
-<h3 id="PCA-principle-component-analysis"><a href="#PCA-principle-component-analysis" class="headerlink" title="PCA(principle component analysis)"></a>PCA(principle component analysis)</h3><p>decrese the dimension of the data</p>
-<p><code>prcomp(data, scale = T/F, center = T/F)</code></p>
-<p>use <code>biplot(model)</code> to visualize the goodness of the model</p>
-<p>ScreePlot:</p>
-<p><code>var&lt;- model$sdev^2</code></p>
-<p><code>pve &lt;- var/sum(var)</code></p>
-<p><code>plot(ave,ylim = c(0,1), type = &quot;b&quot;)</code></p>
+<p>对于上面的公式，称函数f(X) = a + b * X 为一元线性回归函数，<strong>a为回归常数，b为回归系数</strong>，统称回归参数。X 为回归自变量或回归因子，Y 为回归因变量或响应变量。如果(X1,Y1)，(X2,Y2)…(Xn,Yn)是(X,Y)的一组观测值，则一元线性回归模型可表示为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Yi &#x3D; a + b * X + ci，     i&#x3D; 1,2,...n</span><br><span class="line"></span><br><span class="line">其中E(ci)&#x3D;0, var(ci)&#x3D;σ^2, i&#x3D;1,2,...n</span><br></pre></td></tr></table></figure>
+
+<p>通过对一元线性回归模型的数学定义，接下来让我们利用数据集做回归模型的参数估计。</p>
+<h2 id="3-回归参数估计"><a href="#3-回归参数估计" class="headerlink" title="3. 回归参数估计"></a>3. 回归参数估计</h2><p>对于上面的公式，回归参数a,b是我们不知道的，我们需要用参数估计的方法来计算出a,b的值，而从得到数据集的X和Y的定量关系。我们的目标是要计算出一条直线，使直接线上每个点的Y值和实际数据的Y值之差的平方和最小，即（Y1实际-Y1预测）^2+（Y2实际-Y2预测）^2+ …… +（Yn实际-Yn预测）^2 的值最小。参数估计时，我们只考虑Y随X的线性变化的部分，而残差c是不可观测的，参数估计法并不需要考虑残差，对于残差的分析在后文中介绍。</p>
+<p>令公式变形为a和b的函数Q(a,b), 即 (Y实际-Y测试)的平方和，变成到(Y实际 – (a+b*X))的平方和。</p>
+<p><a href="http://blog.fens.me/wp-content/uploads/2016/07/reg2.png" target="_blank" rel="noopener"><img src="http://blog.fens.me/wp-content/uploads/2016/07/reg2.png" alt="reg2"></a></p>
+<p>公式一 回归参数变形公式</p>
+<p>通过<strong>最小二乘估计</strong>推导出a和b的求解公式，详细的推导过程请参考文章<a href="http://www.jianshu.com/p/fcd220697182" target="_blank" rel="noopener">一元线性回归的细节</a></p>
+<p><img src="http://blog.fens.me/wp-content/uploads/2016/07/reg3.png" alt="reg3"></p>
+<p>公式二 回归参数计算公式</p>
+<p>其中 x和y的均值，计算方法如下</p>
+<p><img src="http://blog.fens.me/wp-content/uploads/2016/07/reg4.png" alt="reg4"></p>
+<p>公式三 均值计算公式</p>
+<p>有了这个公式，我们就可以求出a和b两个的回归参数的解了。</p>
+<p>接下来，我们用R语言来实现对上面数据的回归模型的参数估计，R语言中可以<strong>用lm()函数来实现一元线性回归的建模</strong>过程。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 建立线性回归模型</span><br><span class="line">&gt; lm.ab&lt;-lm(y ~ 1+x)</span><br><span class="line"></span><br><span class="line"># 打印参数估计的结果</span><br><span class="line">&gt; lm.ab</span><br><span class="line"></span><br><span class="line">Call:</span><br><span class="line">lm(formula &#x3D; y ~ 1 + x)</span><br><span class="line"></span><br><span class="line">Coefficients:</span><br><span class="line">(Intercept)            x  </span><br><span class="line">   -349.493        1.029</span><br></pre></td></tr></table></figure>
+
+<p>如果你想动手来计算也可以自己实现公式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># x均值</span><br><span class="line">&gt; Xm&lt;-mean(x);Xm </span><br><span class="line">[1] 14034.82</span><br><span class="line"></span><br><span class="line"># y均值</span><br><span class="line">&gt; Ym&lt;-mean(y);Ym</span><br><span class="line">[1] 14096.76</span><br><span class="line"></span><br><span class="line"># 计算回归系数</span><br><span class="line">&gt; b &lt;- sum((x-Xm)*(y-Ym)) &#x2F; sum((x-Xm)^2) ;b</span><br><span class="line">[1] 1.029315</span><br><span class="line"></span><br><span class="line"># 计算回归常数</span><br><span class="line">&gt; a &lt;- Ym - b * Xm;a</span><br><span class="line">[1] -349.493</span><br></pre></td></tr></table></figure>
+
+<p>回归参数a和b的计算结果，与lm()函数的计算结果是相同的。有了a和b的值，我们就可以画出这条近似的直接线。</p>
+<p>计算公式为： <code>Y= a + b * X = -349.493 + 1.029315 * X</code></p>
+<p>画出回归线。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; plot(y~x+1)</span><br><span class="line">&gt; abline(lm.ab)</span><br></pre></td></tr></table></figure>
+
+<p><a href="http://blog.fens.me/wp-content/uploads/2016/07/02.png" target="_blank" rel="noopener"><img src="http://blog.fens.me/wp-content/uploads/2016/07/02.png" alt="02"></a></p>
+<p>这条直线是我们用<strong>数据拟合</strong>出来的，是一个近似的值。我们看到有些点在线上，有些点不在线上。那么要评价这条回归线拟合的好坏，我们就需要对回归模型进行显著性检验。</p>
+<h2 id="4-回归方程的显著性检验"><a href="#4-回归方程的显著性检验" class="headerlink" title="4. 回归方程的显著性检验"></a>4. 回归方程的显著性检验</h2><p>从回归参数的公式二可知，在计算过程中并不一定要知道Y和X是否有线性相关的关系。如果不存相关关系，那么回归方程就没有任何意义了，如果Y和X是有相关关系的，即Y会随着X的变化而线性变化，这个时候一元线性回归方程才有意义。所以，我们需要用假设检验的方法，来验证相关性的有效性。</p>
+<p><strong>通常会采用三种显著性检验的方法。</strong></p>
+<ul>
+<li><strong>T检验法：T检验是检验模型某个自变量Xi对于Y的显著性，通常用P-value判断显著性，小于0.01更小时说明这个自变量Xi与Y相关关系显著。</strong></li>
+<li><strong>F检验法：F检验用于对所有的自变量X在整体上看对于Y的线性显著性，也是用P-value判断显著性，小于0.01更小时说明整体上自变量与Y相关关系显著。</strong></li>
+<li><strong>R^2(R平方)相关系统检验法：用来判断回归方程的拟合程度，R^2的取值在0，1之间，越接近1说明拟合程度越好。</strong></li>
+</ul>
+<p>在R语言中，上面列出的三种检验的方法都已被实现，我们只需要把结果解读。上文中，我们已经通过lm()函数构建一元线性回归模型，然后可以summary()函数来提取模型的计算结果。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&gt; summary(lm.ab)      # 计算结果</span><br><span class="line">Call:</span><br><span class="line">lm(formula &#x3D; y ~ 1 + x)</span><br><span class="line">Residuals:</span><br><span class="line">     Min       1Q   Median       3Q      Max </span><br><span class="line">-11.9385  -2.2317  -0.1797   3.3546  10.2766 </span><br><span class="line">Coefficients:</span><br><span class="line">              Estimate Std. Error t value Pr(&gt;|t|)    </span><br><span class="line">(Intercept) -3.495e+02  7.173e+01  -4.872 2.09e-06 ***</span><br><span class="line">x            1.029e+00  5.111e-03 201.390  &lt; 2e-16 ***</span><br><span class="line">---</span><br><span class="line">Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span><br><span class="line">Residual standard error: 4.232 on 223 degrees of freedom</span><br><span class="line">Multiple R-squared:  0.9945,	Adjusted R-squared:  0.9945 </span><br><span class="line">F-statistic: 4.056e+04 on 1 and 223 DF,  p-value: &lt; 2.2e-16</span><br></pre></td></tr></table></figure>
+
+<p><strong>模型解读：</strong></p>
+<ul>
+<li><strong>Call，列出了回归模型的公式。</strong></li>
+<li><strong>Residuals，列出了残差的最小值点，1/4分位点，中位数点，3/4分位点，最大值点。</strong></li>
+<li><strong>Coefficients，表示参数估计的计算结果。</strong></li>
+<li><strong>Estimate，为参数估计列。Intercept行表示常数参数a的估计值 ，x行表示自变量x的参数b的估计值。</strong></li>
+<li><strong>Std. Error，为参数的标准差，sd(a), sd(b)</strong></li>
+<li><strong>t value，为t值，为T检验的值</strong></li>
+<li><strong>Pr(&gt;|t|) ，表示P-value值，用于T检验判定，匹配显著性标记</strong></li>
+<li><strong>显著性标记，\</strong>*为非常显著，*<em>为高度显著, *</em>为显著，·为不太显著，没有记号为不显著。**</li>
+<li><strong>Residual standard error，表示残差的标准差，自由度为n-2。</strong></li>
+<li><strong>Multiple R-squared，为相关系数R^2的检验，越接近1则越显著。</strong></li>
+<li><strong>Adjusted R-squared，为相关系数的修正系数，解决多元回归自变量越多，判定系数R^2越大的问题。</strong></li>
+<li><strong>F-statistic，表示F统计量，自由度为(1,n-2)，p-value:用于F检验判定，匹配显著性标记。</strong></li>
+</ul>
+<p>通过查看模型的结果数据，我们可以发现通过T检验的截距和自变量x都是非常显著，通过F检验判断出整个模型的自变量是非常显著，同时R^2的相关系数检验可以判断自变量和因变量是高度相关的。</p>
+<p>最后，我们通过的回归参数的检验与回归方程的检验，得到最后一元线性回归方程为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Y &#x3D; -349.493 + 1.029315 * X</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-残差分析和异常点检测"><a href="#5-残差分析和异常点检测" class="headerlink" title="5. 残差分析和异常点检测"></a>5. 残差分析和异常点检测</h2><p>在得到的回归模型进行显著性检验后，<strong>还要在做残差分析(预测值和实际值之间的差)，检验模型的正确性，残差必须服从正态分布N(0,σ^2)</strong>。</p>
+<p>我们可以自己计算数据残差，并进行正态分布检验。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># 残差</span><br><span class="line">&gt; y.res&lt;-residuals(lm.ab)</span><br><span class="line"></span><br><span class="line"># 打印前6条数据</span><br><span class="line">&gt; head(y.res)</span><br><span class="line">        1         2         3         4         5         6 </span><br><span class="line">6.8888680 1.3025744 1.3025744 6.3025744 5.5697074 0.7162808 </span><br><span class="line"></span><br><span class="line"># 正态分布检验</span><br><span class="line">&gt; shapiro.test(y.res)</span><br><span class="line">Shapiro-Wilk normality test</span><br><span class="line">data:  y.res</span><br><span class="line">W &#x3D; 0.98987, p-value &#x3D; 0.1164</span><br><span class="line"></span><br><span class="line"># 画出残差散点图</span><br><span class="line">&gt; plot(y.res)</span><br></pre></td></tr></table></figure>
+
+<p><a href="http://blog.fens.me/wp-content/uploads/2016/07/09.png" target="_blank" rel="noopener"><img src="http://blog.fens.me/wp-content/uploads/2016/07/09.png" alt="09"></a></p>
+<p>对残差进行Shapiro-Wilk正态分布检验，W接近1，p-value&gt;0.05，证明数据集符合正态分布！关于正态分布的介绍，请参考文章<a href="http://blog.fens.me/r-density/" target="_blank" rel="noopener">常用连续型分布介绍及R语言实现</a>。</p>
+<p>同时，我们也可以用R语言的工具生成4种用于模型诊断的图形，简化自己写代码计算的操作。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 画图，回车展示下一张</span><br><span class="line">&gt; plot(lm.ab)    </span><br><span class="line">Hit  to see next plot:   # 残差拟合图</span><br><span class="line">Hit  to see next plot:   # 残差QQ图</span><br><span class="line">Hit  to see next plot:   # 标准化的残差对拟合值 </span><br><span class="line">Hit  to see next plot:   # 标准化残差对杠杆值</span><br></pre></td></tr></table></figure>
+
+<p><a href="http://blog.fens.me/wp-content/uploads/2016/07/04.png" target="_blank" rel="noopener"><img src="http://blog.fens.me/wp-content/uploads/2016/07/04.png" alt="04"></a></p>
+<p>图1，残差和拟合值对比图</p>
+<p>对残差和拟合值作图，横坐标是拟合值，纵坐标是残差。残差和拟合值之间，数据点均匀分布在y=0两侧，呈现出随机的分布，红色线呈现出一条平稳的曲线并没有明显的形状特征，说明残差数据表现非常好。</p>
+<p><a href="http://blog.fens.me/wp-content/uploads/2016/07/05.png" target="_blank" rel="noopener"><img src="http://blog.fens.me/wp-content/uploads/2016/07/05.png" alt="05"></a></p>
+<p>图2，残差QQ图</p>
+<p>残差QQ图，用来描述残差是否符合正态分布。图中的数据点按对角直线排列，趋于一条直线，并被对角直接穿过，直观上符合正态分布。对于近似服从正态分布的标准化残差，应该有 95% 的样本点落在 [-2,2] 区间内。</p>
+<p><a href="http://blog.fens.me/wp-content/uploads/2016/07/06.png" target="_blank" rel="noopener"><img src="http://blog.fens.me/wp-content/uploads/2016/07/06.png" alt="06"></a></p>
+<p>图3，标准化残差平方根和拟合值对比图</p>
+<p>对标准化残差平方根和拟合值作图，横坐标是拟合值，纵坐标是标准化后的残差平方根。与残差和拟合值对比图(图1)的判断方法类似，数据随机分布，红色线呈现出一条平稳的曲线，无明显的形状特征。</p>
+<p><a href="http://blog.fens.me/wp-content/uploads/2016/07/07.png" target="_blank" rel="noopener"><img src="http://blog.fens.me/wp-content/uploads/2016/07/07.png" alt="07"></a></p>
+<p>图4，标准残差和杠杆值对比图</p>
+<p>对标准化残差和杠杆值作图，虚线表示的cooks距离等高线，通常用Cook距离度量的回归影响点。本图中没有出现红色的等高线，则说明数据中没有特别影响回归结果的异常点。</p>
+<p>如果想把把4张图画在一起进行展示，可以改变画布布局。</p>
+<p>&gt; par(mfrow=c(2,2))<br>&gt; plot(lm.ab)</p>
+<p><a href="http://blog.fens.me/wp-content/uploads/2016/07/08.png" target="_blank" rel="noopener"><img src="http://blog.fens.me/wp-content/uploads/2016/07/08.png" alt="08"></a></p>
+<p>看到上面4幅中，每幅图上<strong>都有一些点被特别的标记出来了，这些点是可能存在的异常值点</strong>，如果要对模型进行优化，我们可以从这些来入手。但终于本次残差分析的结果已经很好了，所以对于异常点的优化，可能并不能明显的提升模型的效果。</p>
+<p>从图中发现，索引编号为27和192的2个点在多幅图中出现。我们假设这2个点为异常点，从数据中去掉这2个点，再进行显著性检验和残差分析。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 查看27和192</span><br><span class="line">&gt; df[c(27,192),]</span><br><span class="line">                    zn1.Close zn2.Close</span><br><span class="line">2016-03-01 09:27:00     14130     14205</span><br><span class="line">2016-03-01 14:27:00     14035     14085</span><br><span class="line"></span><br><span class="line"># 新建数据集，去掉27和192</span><br><span class="line">&gt; df2&lt;-df[-c(27,192),]</span><br></pre></td></tr></table></figure>
+
+<p>回归建模和显著性检验。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&gt; x2&lt;-as.numeric(df2[,1])</span><br><span class="line">&gt; y2&lt;-as.numeric(df2[,2])</span><br><span class="line">&gt; lm.ab2&lt;-lm(y2 ~ 1+x2)</span><br><span class="line">&gt; summary(lm.ab2)</span><br><span class="line"></span><br><span class="line">Call:</span><br><span class="line">lm(formula &#x3D; y2 ~ 1 + x2)</span><br><span class="line"></span><br><span class="line">Residuals:</span><br><span class="line">    Min      1Q  Median      3Q     Max </span><br><span class="line">-9.0356 -2.1542 -0.2727  3.3336  9.5879 </span><br><span class="line"></span><br><span class="line">Coefficients:</span><br><span class="line">              Estimate Std. Error t value Pr(&gt;|t|)    </span><br><span class="line">(Intercept) -3.293e+02  7.024e+01  -4.688 4.83e-06 ***</span><br><span class="line">x2           1.028e+00  5.004e-03 205.391  &lt; 2e-16 ***</span><br><span class="line">---</span><br><span class="line">Signif. codes:  </span><br><span class="line">0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span><br><span class="line"></span><br><span class="line">Residual standard error: 4.117 on 221 degrees of freedom</span><br><span class="line">Multiple R-squared:  0.9948,	Adjusted R-squared:  0.9948 </span><br><span class="line">F-statistic: 4.219e+04 on 1 and 221 DF,  p-value: &lt; 2.2e-16</span><br></pre></td></tr></table></figure>
+
+<p>对比这次的显著性检验结果和之前结果，T检验，F检验 和 R^2检验，并没有明显的效果提升，结果和我预想的是一样的。所以，通过残差分析和异常点分析，我认为模型是有效的。</p>
+<h2 id="6-模型预测"><a href="#6-模型预测" class="headerlink" title="6. 模型预测"></a>6. 模型预测</h2><p>最后，我们获得了一元线性回归方程的公式，就可以对数据进行预测了。比如，对给定X=x0时，计算出y0=a+b*x0的值，并计算出置信度为1-α的预测区间。</p>
+<p>当X=x0,Y=y0时，置信度为1-α的预测区间为</p>
+<p><img src="http://blog.fens.me/wp-content/uploads/2016/07/reg5.png" alt="reg5"></p>
+<p>即</p>
+<p><img src="http://blog.fens.me/wp-content/uploads/2016/07/reg6.png" alt="reg6"></p>
+<p>我们可以用R语言的predict()函数来计算预测值y0，和相应的预测区间。程序算法如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; new&lt;-data.frame(x&#x3D;14040)</span><br><span class="line">&gt; lm.pred&lt;-predict(lm.sol,new,interval&#x3D;&quot;prediction&quot;,level&#x3D;0.95)</span><br><span class="line"></span><br><span class="line"># 预测结果</span><br><span class="line">&gt; lm.pred</span><br><span class="line">       fit      lwr      upr</span><br><span class="line">1 14102.09 14093.73 14110.44</span><br></pre></td></tr></table></figure>
+
+<p>当x0=14040时，在预测区间为0.95的概率时，y0的值为 14102，预测区间为[14093.73,14110.44]。</p>
+<p>我们通过图形来表示。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; plot(y~x+1)</span><br><span class="line">&gt; abline(lm.ab,col&#x3D;&#39;red&#39;)</span><br><span class="line">&gt; points(rep(newX$x,3),y&#x3D;lm.pred,pch&#x3D;19,col&#x3D;c(&#39;red&#39;,&#39;blue&#39;,&#39;green&#39;))</span><br></pre></td></tr></table></figure>
+
+<p><a href="http://blog.fens.me/wp-content/uploads/2016/07/03.png" target="_blank" rel="noopener"><img src="http://blog.fens.me/wp-content/uploads/2016/07/03.png" alt="03"></a></p>
+<p>其中，红色点为y0的值，蓝色点为预测区间最小值，绿色点为预测区间最大值。</p>
 
       
 
@@ -245,6 +366,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">R LM P-test F-test</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -295,7 +427,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/14/machine-learning-using-r-3/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/19/lineare-modelle-review-2/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -309,18 +441,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/17/lineare-modelle-review-1/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/07/20/lineare-modelle-review-3/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          lineare modelle review(1)
+          lineare modelle review 3
         
       </div>
     </a>
   
   
-    <a href="/2020/07/13/machine-learning-using-r-2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">machine learning using r(2)</div>
+    <a href="/2020/07/17/lineare-modelle-review-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">lineare modelle review(1)</div>
       <i class="icon-circle-right"></i>
     </a>
   

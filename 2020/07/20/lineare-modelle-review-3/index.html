@@ -6,19 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>machine learning using r(3) | Hexo</title>
+  <title>lineare modelle review 3 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Machine Learning methods using R(3)Unsupervised Learning in RTypes of machine learning:  Unsupervised Learning   Finding structure in unlabeled data  Supervised Learning Making Predictions based on la">
+  <meta name="description" content="Review Lineare Modelle (3)Multiple Testen und simultane KonfidenzbereicheHäufig werden bei multiplen lineare Modellen mehrere Tests durchgeführt oder für mehrere Parameter Konfidenzintervalle bestimmt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="machine learning using r(3)">
-<meta property="og:url" content="http://yoursite.com/2020/07/14/machine-learning-using-r-3/index.html">
+<meta property="og:title" content="lineare modelle review 3">
+<meta property="og:url" content="http://yoursite.com/2020/07/20/lineare-modelle-review-3/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Machine Learning methods using R(3)Unsupervised Learning in RTypes of machine learning:  Unsupervised Learning   Finding structure in unlabeled data  Supervised Learning Making Predictions based on la">
+<meta property="og:description" content="Review Lineare Modelle (3)Multiple Testen und simultane KonfidenzbereicheHäufig werden bei multiplen lineare Modellen mehrere Tests durchgeführt oder für mehrere Parameter Konfidenzintervalle bestimmt">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-14T14:07:49.000Z">
-<meta property="article:modified_time" content="2020-07-14T14:08:41.175Z">
+<meta property="og:image" content="https://www.mediecogroup.com/images/article_images/3ca08866947f7e024ecfd3492c42dc5a">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1ggxvdd2su6j316e0u0435.jpg">
+<meta property="article:published_time" content="2020-07-20T17:55:08.000Z">
+<meta property="article:modified_time" content="2020-07-20T17:56:21.244Z">
 <meta property="article:author" content="Ye Yuan">
+<meta property="article:tag" content="lineare modelle">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.mediecogroup.com/images/article_images/3ca08866947f7e024ecfd3492c42dc5a">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,72 +154,53 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-machine-learning-using-r-3" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-lineare-modelle-review-3" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      machine learning using r(3)
+      lineare modelle review 3
     </h1>
   
 
         
-        <a href="/2020/07/14/machine-learning-using-r-3/" class="archive-article-date">
-  	<time datetime="2020-07-14T14:07:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
+        <a href="/2020/07/20/lineare-modelle-review-3/" class="archive-article-date">
+  	<time datetime="2020-07-20T17:55:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Machine-Learning-methods-using-R-3"><a href="#Machine-Learning-methods-using-R-3" class="headerlink" title="Machine Learning methods using R(3)"></a>Machine Learning methods using R(3)</h1><h2 id="Unsupervised-Learning-in-R"><a href="#Unsupervised-Learning-in-R" class="headerlink" title="Unsupervised Learning in R"></a>Unsupervised Learning in R</h2><p>Types of machine learning:</p>
-<ul>
-<li><p>Unsupervised Learning </p>
-<p> Finding structure in unlabeled data</p>
-</li>
-<li><p>Supervised Learning</p>
-<p>Making Predictions based on labeled data</p>
-<p>Predictions like regression or classification </p>
-</li>
-<li><p>Reinforcement Learning(强化学习)</p>
-<p>Feed back in a real or synthetic environment</p>
-</li>
-</ul>
-<p>Unlabeled data vs Labeled data: Unlabeled data only has some data, but they are not named or classified.</p>
-<h4 id="Unsupervised-Learning"><a href="#Unsupervised-Learning" class="headerlink" title="Unsupervised Learning:"></a>Unsupervised Learning:</h4><p>Find patterns in the feature of the data</p>
-<p>Visualization of high dimensional data</p>
-<p>Pre-processing before supervised learning</p>
-<h4 id="K-means-clustering-Algorithm"><a href="#K-means-clustering-Algorithm" class="headerlink" title="K-means clustering Algorithm"></a>K-means clustering Algorithm</h4><p><code>kmeans(data,center = number of centers, nstart = attempts multiple intial configurations and reports on tht best one)</code></p>
-<p>Usually, we don’t know how many clusters do we need, so we will try each of them one by one and judge the goodness of them by minimum sum of squares.</p>
-<p><code>wss&lt;- 0</code></p>
-<p><code>for(i in 1:15){</code></p>
-<p><code>kmeans &lt;- kmeans(data, center = i, nstart = number)</code></p>
-<p><code>wss[i] &lt;- kmeans$tot.withinss</code></p>
-<p><code>}</code></p>
-<p><code>plot(1:15, wss, type = &quot;b&quot;, xlab =&quot;Number of Clusters&quot;, ylab = &quot;Within groups sum of squares&quot;)</code></p>
-<p>And find the elbow point.</p>
-<h3 id="Hierarchical-Clustering"><a href="#Hierarchical-Clustering" class="headerlink" title="Hierarchical Clustering"></a>Hierarchical Clustering</h3><p>Number of clusters is not known ahead of time</p>
-<p>Two kinds: bottom-up and top-down</p>
-<p>Top- down:</p>
-<p>Imagine we have 5 points, we will say that these 5 points are different 5 clusters, then we will merge the 2 clusters into one depending on its distance, and keep iterating the process….</p>
-<p><code>hclust(dist(x))</code></p>
-<p>draw a dendrogram</p>
-<p><code>plot(hclust.out)</code></p>
-<p><code>abline(h = 6, col = &quot;red&quot;)</code></p>
-<p>Tree cutting</p>
-<p><code>cutree(hclust.out,h =6)</code></p>
-<p><code>cutree(hclust.out, k =2)</code></p>
-<p>Pre-task:</p>
-<p>use <code>scale(x)</code> to scale the matrix data(normalization )</p>
-<h3 id="PCA-principle-component-analysis"><a href="#PCA-principle-component-analysis" class="headerlink" title="PCA(principle component analysis)"></a>PCA(principle component analysis)</h3><p>decrese the dimension of the data</p>
-<p><code>prcomp(data, scale = T/F, center = T/F)</code></p>
-<p>use <code>biplot(model)</code> to visualize the goodness of the model</p>
-<p>ScreePlot:</p>
-<p><code>var&lt;- model$sdev^2</code></p>
-<p><code>pve &lt;- var/sum(var)</code></p>
-<p><code>plot(ave,ylim = c(0,1), type = &quot;b&quot;)</code></p>
+        <h1 id="Review-Lineare-Modelle-3"><a href="#Review-Lineare-Modelle-3" class="headerlink" title="Review Lineare Modelle (3)"></a>Review Lineare Modelle (3)</h1><h2 id="Multiple-Testen-und-simultane-Konfidenzbereiche"><a href="#Multiple-Testen-und-simultane-Konfidenzbereiche" class="headerlink" title="Multiple Testen und simultane Konfidenzbereiche"></a>Multiple Testen und simultane Konfidenzbereiche</h2><p>Häufig werden bei multiplen lineare Modellen mehrere Tests durchgeführt oder für mehrere Parameter Konfidenzintervalle bestimmt. Dann ist die Wahrscheinlichkeit, dass mindestens eine falsche Schätzung getroffen wird, höher als das Niveau der einzelnen Tests.</p>
+<h6 id="Abhilfe-multiplen-test-Prozeduren"><a href="#Abhilfe-multiplen-test-Prozeduren" class="headerlink" title="Abhilfe: multiplen test Prozeduren"></a>Abhilfe: multiplen test Prozeduren</h6><p> lokales niveau: Einzeln Nivaeu des Tests</p>
+<p>globales Niveau: Wahrscheinlichkeit, dass mindestens eine Nullhypothese abgelehnt wird, obwohl alle Nullhypothese gelten.</p>
+<p>multiples Niveau: Wahrscheinlichkeit, dass mindestens eine Nullhypothese fälschlischerweise abgelehnt wird.</p>
+<h6 id="Strategie"><a href="#Strategie" class="headerlink" title="Strategie:"></a>Strategie:</h6><p>Bonferroni: Allgemeine Methode für m Tests, die sehr allgemein anwendbar ist.</p>
+<p>Scheffe: Allgemeine Methode im linearen Modell für eine grosse Anzahl von Hypothese bzw Parameter.</p>
+<p>Tukey: Methode nach dem multiple range Prinzip</p>
+<p>Abschlussprozeduren: Für Testsystem häufig mächtiger als andere Prozeduren, Wichtig im Falls des Vergleich von 3 Gruppen.</p>
+<h3 id="These-Strategies-above-are-used-to-do-the-multiple-comparisons-between-different-groups"><a href="#These-Strategies-above-are-used-to-do-the-multiple-comparisons-between-different-groups" class="headerlink" title="These Strategies above are used to do the multiple comparisons between different groups."></a>These Strategies above are used to do the multiple comparisons between different groups.</h3><p>For example, i would like to know if people like action movies. I picked 30 people averagely from teenagers, mid-agers and elder people. I would like to know if there is a difference on the favor of the action movies! between teenagers and mid-agers.</p>
+<p>Here is picture illustrates the procedure of do the tests</p>
+<p><img src="https://www.mediecogroup.com/images/article_images/3ca08866947f7e024ecfd3492c42dc5a" alt="p1"></p>
+<h3 id="Leverage"><a href="#Leverage" class="headerlink" title="Leverage"></a>Leverage</h3><p>In statistics and in particular in regression analysis, leverage is a measure of <strong>how far away the independent variable values of an observation are from those of the other observations</strong>.</p>
+<p><strong>The observation point x is abnormal， has no relationship with Y!</strong> (预测变量x取值超过正常范围的点, 与y无关) </p>
+<p>High-leverage points are those observations, if any, made at extreme or outlying values of the independent variables such that the lack of neighboring observations means that the fitted regression model will pass close to that particular observation</p>
+<h4 id="Ausreisser-outliers-离群点"><a href="#Ausreisser-outliers-离群点" class="headerlink" title="Ausreisser: outliers, 离群点"></a>Ausreisser: outliers, 离群点</h4><p>For an already known value x, its corrensponding value Y is not in the right position. (Big Residual!)</p>
+<h4 id="Cook’s-Distance"><a href="#Cook’s-Distance" class="headerlink" title="Cook’s Distance"></a>Cook’s Distance</h4><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ggxvdd2su6j316e0u0435.jpg" alt="cook&#39;s Distance"></p>
+<p>The higher cook’s distance is, the stronger influence this point has on the whole model.(Einflussreiche Beobachtung, 强影响点)</p>
+<h3 id="Model-Selection-AIC-BIC"><a href="#Model-Selection-AIC-BIC" class="headerlink" title="Model Selection(AIC, BIC)"></a><strong>Model Selection(AIC, BIC)</strong></h3><p>Used for the selection of numbers of the variables under a common model.</p>
+<p>在同一个模型下 选择最合适的数量的参数</p>
+<p><strong>AIC (Akaike- Information- Criterion)</strong></p>
+<p>k is the number of variables, L is the maximum likelihood function</p>
+<p><strong>The smaller, the better</strong> </p>
+<p><strong>BIC(Bayesian - Information - Criterion)</strong></p>
+<p>k is the number of variables, n is the Beobachtungen, L is the maximum likelihood function</p>
+<p><strong>The smaller, the better</strong></p>
+<p><strong>Other method used to select suitable number of parameters:</strong></p>
+<p>R squared, adjusted R squared</p>
 
       
 
@@ -245,6 +230,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">lineare modelle</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -295,7 +291,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/14/machine-learning-using-r-3/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/20/lineare-modelle-review-3/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -309,18 +305,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/17/lineare-modelle-review-1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          lineare modelle review(1)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/07/13/machine-learning-using-r-2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">machine learning using r(2)</div>
+    <a href="/2020/07/19/lineare-modelle-review-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">lineare modelle review(2)</div>
       <i class="icon-circle-right"></i>
     </a>
   

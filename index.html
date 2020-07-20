@@ -150,19 +150,119 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-The-Interpretation-of-basic-LM-using-R" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-lineare-modelle-review-3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/19/The-Interpretation-of-basic-LM-using-R/">The Interpretation of basic LM using R</a>
+      <a class="article-title" href="/2020/07/20/lineare-modelle-review-3/">lineare modelle review 3</a>
     </h1>
   
 
         
-        <a href="/2020/07/19/The-Interpretation-of-basic-LM-using-R/" class="archive-article-date">
+        <a href="/2020/07/20/lineare-modelle-review-3/" class="archive-article-date">
+  	<time datetime="2020-07-20T17:55:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Review-Lineare-Modelle-3"><a href="#Review-Lineare-Modelle-3" class="headerlink" title="Review Lineare Modelle (3)"></a>Review Lineare Modelle (3)</h1><h2 id="Multiple-Testen-und-simultane-Konfidenzbereiche"><a href="#Multiple-Testen-und-simultane-Konfidenzbereiche" class="headerlink" title="Multiple Testen und simultane Konfidenzbereiche"></a>Multiple Testen und simultane Konfidenzbereiche</h2><p>Häufig werden bei multiplen lineare Modellen mehrere Tests durchgeführt oder für mehrere Parameter Konfidenzintervalle bestimmt. Dann ist die Wahrscheinlichkeit, dass mindestens eine falsche Schätzung getroffen wird, höher als das Niveau der einzelnen Tests.</p>
+<h6 id="Abhilfe-multiplen-test-Prozeduren"><a href="#Abhilfe-multiplen-test-Prozeduren" class="headerlink" title="Abhilfe: multiplen test Prozeduren"></a>Abhilfe: multiplen test Prozeduren</h6><p> lokales niveau: Einzeln Nivaeu des Tests</p>
+<p>globales Niveau: Wahrscheinlichkeit, dass mindestens eine Nullhypothese abgelehnt wird, obwohl alle Nullhypothese gelten.</p>
+<p>multiples Niveau: Wahrscheinlichkeit, dass mindestens eine Nullhypothese fälschlischerweise abgelehnt wird.</p>
+<h6 id="Strategie"><a href="#Strategie" class="headerlink" title="Strategie:"></a>Strategie:</h6><p>Bonferroni: Allgemeine Methode für m Tests, die sehr allgemein anwendbar ist.</p>
+<p>Scheffe: Allgemeine Methode im linearen Modell für eine grosse Anzahl von Hypothese bzw Parameter.</p>
+<p>Tukey: Methode nach dem multiple range Prinzip</p>
+<p>Abschlussprozeduren: Für Testsystem häufig mächtiger als andere Prozeduren, Wichtig im Falls des Vergleich von 3 Gruppen.</p>
+<h3 id="These-Strategies-above-are-used-to-do-the-multiple-comparisons-between-different-groups"><a href="#These-Strategies-above-are-used-to-do-the-multiple-comparisons-between-different-groups" class="headerlink" title="These Strategies above are used to do the multiple comparisons between different groups."></a>These Strategies above are used to do the multiple comparisons between different groups.</h3><p>For example, i would like to know if people like action movies. I picked 30 people averagely from teenagers, mid-agers and elder people. I would like to know if there is a difference on the favor of the action movies! between teenagers and mid-agers.</p>
+<p>Here is picture illustrates the procedure of do the tests</p>
+<p><img src="https://www.mediecogroup.com/images/article_images/3ca08866947f7e024ecfd3492c42dc5a" alt="p1"></p>
+<h3 id="Leverage"><a href="#Leverage" class="headerlink" title="Leverage"></a>Leverage</h3><p>In statistics and in particular in regression analysis, leverage is a measure of <strong>how far away the independent variable values of an observation are from those of the other observations</strong>.</p>
+<p><strong>The observation point x is abnormal， has no relationship with Y!</strong> (预测变量x取值超过正常范围的点, 与y无关) </p>
+<p>High-leverage points are those observations, if any, made at extreme or outlying values of the independent variables such that the lack of neighboring observations means that the fitted regression model will pass close to that particular observation</p>
+<h4 id="Ausreisser-outliers-离群点"><a href="#Ausreisser-outliers-离群点" class="headerlink" title="Ausreisser: outliers, 离群点"></a>Ausreisser: outliers, 离群点</h4><p>For an already known value x, its corrensponding value Y is not in the right position. (Big Residual!)</p>
+<h4 id="Cook’s-Distance"><a href="#Cook’s-Distance" class="headerlink" title="Cook’s Distance"></a>Cook’s Distance</h4><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ggxvdd2su6j316e0u0435.jpg" alt="cook&#39;s Distance"></p>
+<p>The higher cook’s distance is, the stronger influence this point has on the whole model.(Einflussreiche Beobachtung, 强影响点)</p>
+<h3 id="Model-Selection-AIC-BIC"><a href="#Model-Selection-AIC-BIC" class="headerlink" title="Model Selection(AIC, BIC)"></a><strong>Model Selection(AIC, BIC)</strong></h3><p>Used for the selection of numbers of the variables under a common model.</p>
+<p>在同一个模型下 选择最合适的数量的参数</p>
+<p><strong>AIC (Akaike- Information- Criterion)</strong></p>
+<p>k is the number of variables, L is the maximum likelihood function</p>
+<p><strong>The smaller, the better</strong> </p>
+<p><strong>BIC(Bayesian - Information - Criterion)</strong></p>
+<p>k is the number of variables, n is the Beobachtungen, L is the maximum likelihood function</p>
+<p><strong>The smaller, the better</strong></p>
+<p><strong>Other method used to select suitable number of parameters:</strong></p>
+<p>R squared, adjusted R squared</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">lineare modelle</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/20/lineare-modelle-review-3/">show all >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-lineare-modelle-review-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/19/lineare-modelle-review-2/">lineare modelle review(2)</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/19/lineare-modelle-review-2/" class="archive-article-date">
   	<time datetime="2020-07-19T10:55:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-19</time>
 </a>
         
@@ -333,7 +433,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">R LM P-test F-tes</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">R LM P-test F-test</a>
         		</li>
       		
 		</ul>
@@ -343,7 +443,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/19/The-Interpretation-of-basic-LM-using-R/">show all >></a>
+          <a class="article-more-a" href="/2020/07/19/lineare-modelle-review-2/">show all >></a>
         </p>
       
 
@@ -1187,68 +1287,10 @@
 
 
   
-    <article id="post-my-first-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/29/my-first-blog/">my first blog</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/29/my-first-blog/" class="archive-article-date">
-  	<time datetime="2020-06-29T12:32:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/29/my-first-blog/">show all >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    </nav>
   
 
 
@@ -1350,7 +1392,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">R LM P-test F-tes</a>
+                <a href="javascript:void(0)" class="js-tag color4">R LM P-test F-test</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">lineare modelle</a>
               </li>
             
             <div class="clearfix"></div>
