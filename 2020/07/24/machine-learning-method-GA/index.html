@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>my first blog | Hexo</title>
+  <title>machine learning method -GA | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Student studies CS in LMU Munich">
+  <meta name="description" content="Machine Lerning Method - GAGenetic Algorithm(GA)Genetic Algorithm is a classic type of evolutianary algorithm. It got inspired from the reproduction process in biology and has adopted the rule of surv">
 <meta property="og:type" content="article">
-<meta property="og:title" content="my first blog">
-<meta property="og:url" content="http://yoursite.com/2020/06/29/my-first-blog/index.html">
+<meta property="og:title" content="machine learning method -GA">
+<meta property="og:url" content="http://yoursite.com/2020/07/24/machine-learning-method-GA/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Student studies CS in LMU Munich">
+<meta property="og:description" content="Machine Lerning Method - GAGenetic Algorithm(GA)Genetic Algorithm is a classic type of evolutianary algorithm. It got inspired from the reproduction process in biology and has adopted the rule of surv">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-29T12:32:27.000Z">
-<meta property="article:modified_time" content="2020-06-29T12:32:27.139Z">
+<meta property="article:published_time" content="2020-07-24T12:55:07.000Z">
+<meta property="article:modified_time" content="2020-07-24T12:57:07.387Z">
 <meta property="article:author" content="Ye Yuan">
+<meta property="article:tag" content="machinelearning GA Python">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -150,27 +151,441 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-my-first-blog" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-machine-learning-method-GA" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      my first blog
+      machine learning method -GA
     </h1>
   
 
         
-        <a href="/2020/06/29/my-first-blog/" class="archive-article-date">
-  	<time datetime="2020-06-29T12:32:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-29</time>
+        <a href="/2020/07/24/machine-learning-method-GA/" class="archive-article-date">
+  	<time datetime="2020-07-24T12:55:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-24</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="Machine-Lerning-Method-GA"><a href="#Machine-Lerning-Method-GA" class="headerlink" title="Machine Lerning Method - GA"></a>Machine Lerning Method - GA</h2><h3 id="Genetic-Algorithm-GA"><a href="#Genetic-Algorithm-GA" class="headerlink" title="Genetic Algorithm(GA)"></a>Genetic Algorithm(GA)</h3><p>Genetic Algorithm is a classic type of evolutianary algorithm. It got inspired from the reproduction process in biology and has adopted the rule of survival of the fittest.</p>
+<p> <strong><em>It is not the strongest of the species that survive, but the one most responsive to change. - Charles Darwin</em></strong></p>
+<h5 id="Process"><a href="#Process" class="headerlink" title="Process"></a>Process</h5><h5 id="1-Initialization"><a href="#1-Initialization" class="headerlink" title="1.Initialization"></a>1.Initialization</h5><p>Randomly create n state as the initial state(n is the population size, which varies from different circumstances)</p>
+<h5 id="2-Evolution"><a href="#2-Evolution" class="headerlink" title="2.Evolution"></a>2.Evolution</h5><h6 id="2-1-Selection"><a href="#2-1-Selection" class="headerlink" title="2.1 Selection"></a>2.1 Selection</h6><p> Select some state based on selection rules (Like roulette)</p>
+<h5 id="2-2-Crossover"><a href="#2-2-Crossover" class="headerlink" title="2,2 Crossover"></a>2,2 Crossover</h5><p> Take two different states from the selected population as parents, cross them over so that there is a new state, which is the kid of the orignal two states.</p>
+<h5 id="2-3-Mutation"><a href="#2-3-Mutation" class="headerlink" title="2.3 Mutation"></a>2.3 Mutation</h5><p>In biology, there is a chance that the gene will mutate irrationally, so do the GA algorithm. After the crossover process, there is a little probability that the Genetype will mutate, which may lead to another phenotype.</p>
+<p>After that, the evolved population has then become a new population and will begin a new round of evolution.</p>
+<h3 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h3><h5 id="What-is-Genotype-and-phenotype"><a href="#What-is-Genotype-and-phenotype" class="headerlink" title="What is Genotype and phenotype?"></a>What is Genotype and phenotype?</h5><p>In biology, the genotype is the genotype and the phenotype is the expression of the gene, which is our appearance. In GA, a phenotype often stands for the current state and the genotype is the language that the computer could understand and have appropriatly illustrates the state, which in the most of times needs us to discover</p>
+<h5 id="How-to-select-the-state"><a href="#How-to-select-the-state" class="headerlink" title="How to select the state?"></a>How to select the state?</h5><p>We would then introduce a function called fitness functionm which illustrates the goodness of the state. For example, in the TSP problem , we would like to calculate the total distance between the cities as our fiteness function. In this example, the less distance, the better.</p>
+<h3 id="Realization-in-python"><a href="#Realization-in-python" class="headerlink" title="Realization in python"></a>Realization in python</h3><p>Bsp: tsp problem</p>
+<h5 id="Link-https-morvanzhou-github-io-tutorials"><a href="#Link-https-morvanzhou-github-io-tutorials" class="headerlink" title="Link: https://morvanzhou.github.io/tutorials/"></a>Link: <a href="https://morvanzhou.github.io/tutorials/" target="_blank" rel="noopener">https://morvanzhou.github.io/tutorials/</a></h5><table>
+<thead>
+<tr>
+<th>“””</th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td align="left">Visualize Genetic Algorithm to find the shortest path for travel sales problem.</td>
+</tr>
+<tr>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left">“””</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">import matplotlib.pyplot as plt</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">import numpy as np</td>
+</tr>
+<tr>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left">N_CITIES = 20  # DNA size</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">CROSS_RATE = 0.1</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">MUTATE_RATE = 0.02</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">POP_SIZE = 500</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">N_GENERATIONS = 500</td>
+</tr>
+<tr>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left">class GA(object):</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">def <strong>init</strong>(self, DNA_size, cross_rate, mutation_rate, pop_size, ):</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">self.DNA_size = DNA_size</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">self.cross_rate = cross_rate</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">self.mutate_rate = mutation_rate</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">self.pop_size = pop_size</td>
+</tr>
+<tr>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left">self.pop = np.vstack([np.random.permutation(DNA_size) for _ in range(pop_size)])</td>
+</tr>
+<tr>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left">def translateDNA(self, DNA, city_position):     # get cities’ coord in order</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">line_x = np.empty_like(DNA, dtype=np.float64)</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">line_y = np.empty_like(DNA, dtype=np.float64)</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">for i, d in enumerate(DNA):</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">city_coord = city_position[d]</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">line_x[i, :] = city_coord[:, 0]</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">line_y[i, :] = city_coord[:, 1]</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">return line_x, line_y</td>
+</tr>
+<tr>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left">def get_fitness(self, line_x, line_y):</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">total_distance = np.empty((line_x.shape[0],), dtype=np.float64)</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">for i, (xs, ys) in enumerate(zip(line_x, line_y)):</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">total_distance[i] = np.sum(np.sqrt(np.square(np.diff(xs)) + np.square(np.diff(ys))))</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">fitness = np.exp(self.DNA_size * 2 / total_distance)</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">return fitness, total_distance</td>
+</tr>
+<tr>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left">def select(self, fitness):</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">idx = np.random.choice(np.arange(self.pop_size), size=self.pop_size, replace=True, p=fitness / fitness.sum())</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">return self.pop[idx]</td>
+</tr>
+<tr>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left">def crossover(self, parent, pop):</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">if np.random.rand() &lt; self.cross_rate:</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">i_ = np.random.randint(0, self.pop_size, size=1)                        # select another individual from pop</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">cross_points = np.random.randint(0, 2, self.DNA_size).astype(np.bool)   # choose crossover points</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">keep_city = parent[~cross_points]                                       # find the city number</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">swap_city = pop[i_, np.isin(pop[i_].ravel(), keep_city, invert=True)]</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">parent[:] = np.concatenate((keep_city, swap_city))</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">return parent</td>
+</tr>
+<tr>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left">def mutate(self, child):</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">for point in range(self.DNA_size):</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">if np.random.rand() &lt; self.mutate_rate:</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">swap_point = np.random.randint(0, self.DNA_size)</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">swapA, swapB = child[point], child[swap_point]</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">child[point], child[swap_point] = swapB, swapA</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">return child</td>
+</tr>
+<tr>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left">def evolve(self, fitness):</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">pop = self.select(fitness)</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">pop_copy = pop.copy()</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">for parent in pop:  # for every parent</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">child = self.crossover(parent, pop_copy)</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">child = self.mutate(child)</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">parent[:] = child</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">self.pop = pop</td>
+</tr>
+<tr>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left">class TravelSalesPerson(object):</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">def <strong>init</strong>(self, n_cities):</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">self.city_position = np.random.rand(n_cities, 2)</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">plt.ion()</td>
+</tr>
+<tr>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left">def plotting(self, lx, ly, total_d):</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">plt.cla()</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">plt.scatter(self.city_position[:, 0].T, self.city_position[:, 1].T, s=100, c=’k’)</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">plt.plot(lx.T, ly.T, ‘r-‘)</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">plt.text(-0.05, -0.05, “Total distance=%.2f” % total_d, fontdict={‘size’: 20, ‘color’: ‘red’})</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">plt.xlim((-0.1, 1.1))</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">plt.ylim((-0.1, 1.1))</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">plt.pause(0.01)</td>
+</tr>
+<tr>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left">ga = GA(DNA_size=N_CITIES, cross_rate=CROSS_RATE, mutation_rate=MUTATE_RATE, pop_size=POP_SIZE)</td>
+</tr>
+<tr>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left">env = TravelSalesPerson(N_CITIES)</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">for generation in range(N_GENERATIONS):</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">lx, ly = ga.translateDNA(ga.pop, env.city_position)</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">fitness, total_distance = ga.get_fitness(lx, ly)</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">ga.evolve(fitness)</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">best_idx = np.argmax(fitness)</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">print(‘Gen:’, generation, ‘| best fit: %.2f’ % fitness[best_idx],)</td>
+</tr>
+<tr>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left">env.plotting(lx[best_idx], ly[best_idx], total_distance[best_idx])</td>
+</tr>
+<tr>
+<td></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left">plt.ioff()</td>
+</tr>
+<tr>
+<td></td>
+<td align="left">plt.show()</td>
+</tr>
+</tbody></table>
+
       
 
       
@@ -199,6 +614,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">machinelearning GA Python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -249,7 +675,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/06/29/my-first-blog/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/24/machine-learning-method-GA/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -263,15 +689,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/06/29/daily-review-29-06-2020/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          daily-review-29-06-2020
-        
-      </div>
-    </a>
   
+    <a href="/2020/07/20/lineare-modelle-review-3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">lineare modelle review 3</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
