@@ -150,6 +150,100 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-daily-review-30-06-2020" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/30/daily-review-30-06-2020/">daily-review-30-06-2020</a>
+    </h1>
+  
+
+        
+        <a href="/2020/06/30/daily-review-30-06-2020/" class="archive-article-date">
+  	<time datetime="2020-06-30T16:16:43.580Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>title: daily review 30.06.2020<br>date: 2020-06-30 18:08:05<br>tags: daily review<br>–<br>I have finished the Intelligente System Hausarbeit today and have created my own domain bobyuan.com on AliCloud, which has not been put into use yet because of some technical Stoerung and i will realize it asap</p>
+<h2 id="Informatik-field"><a href="#Informatik-field" class="headerlink" title="Informatik field:"></a>Informatik field:</h2><h4 id="Local-Beam-Search"><a href="#Local-Beam-Search" class="headerlink" title="Local Beam Search:"></a>Local Beam Search:</h4><p>I reviewed the local beam search today. it is a lokale Suche and the basic idea is to find all the neighbor from the current state, and test, if the state value from the best-neighbor better than the current situation is. If yes, then take the top k-best neighbor and iterating the process above. The algorithm terminates when the state value from the neighbor is not better than the state value of the current state.</p>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ggarrfxwfqj315l0ls7ic.jpg" alt="IMG_AFAC9EF66F63-1" style="zoom:60%;" />
+
+
+<p>The picture above is the pseudo code from the Folie.</p>
+<h3 id="Simulated-Annealing"><a href="#Simulated-Annealing" class="headerlink" title="Simulated Annealing"></a>Simulated Annealing</h3><p>I also reviewed the simulated annealing algorithm . The basic idea of that algorithm is that it simulates the annealing process on physics, which means if here comes a locale Maxima, there will be a certain probability that Algo rejected and move forward. Thus makes it possible to find the global maximum. The following snapshot shows its algorithm, which is also cut from the folien.</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ggarrs2od2j315o0lok5j.jpg" alt="IMG_6B5CF0F491A3-1"></p>
+<h4 id="Hypothesis-What-if-we-combine-the-local-beam-search-and-simulated-annealing-would-it-be-more-accurate-to-find-globale-maximum-The-pseudo-code-below"><a href="#Hypothesis-What-if-we-combine-the-local-beam-search-and-simulated-annealing-would-it-be-more-accurate-to-find-globale-maximum-The-pseudo-code-below" class="headerlink" title="Hypothesis: What if we combine the local beam search and simulated annealing? would it be more accurate to find globale maximum?  The pseudo code below:"></a>Hypothesis: What if we combine the local beam search and simulated annealing? would it be more accurate to find globale maximum?  The pseudo code below:</h4><p>function Beam_Annealing return a solution state:</p>
+<p>​    Inputs: <code>problem</code>, a problem</p>
+<p>​                <code>schedule</code>, a mapping from time to “temperature”</p>
+<p>​                <code>k</code>: the number of best neighbors which will be used in the local beam search</p>
+<p>​    local variables :<code>current</code>,current state</p>
+<p>​                                <code>next</code>, next state</p>
+<p>​    <code>k</code> current states &lt;- intitialize the problem with k starting state.</p>
+<p>​    <code>max_value</code> &lt;- unendlich gross</p>
+<p>​    loop_do :</p>
+<p>​     loop throuth each beam in <code>k</code> current state </p>
+<p>​     add successors for each beam to neighbors</p>
+<p>​    if (<code>max_neighborsvalue</code> <strong>&lt;=</strong> <code>max_value</code>)  then </p>
+<p>​        <strong>return</strong> member of k-current state with highes fitness</p>
+<p>​         else  <code>k-current states</code> &lt;- top k values in neighbors</p>
+<p>​        <code>max_value</code> &lt;- <code>max_value</code>                                      only with probability <code>e^(delta_E/T)</code></p>
+<p>​    else </p>
+<p>​        <code>k-current state</code> &lt;- top k values in neighbors</p>
+<p>​        <code>max_value</code>  &lt;- <code>max_neighborsvalue</code></p>
+<p>I have no idea whether it would optimize the original algorithm or not. To prove that i may need further investigation.</p>
+<p>Besides, i also read a very interesting article in <a href=""https://www.zhihu.com/question/54356960"">Zhihu</a>, which illustrates the beam search pretty well.</p>
+<h3 id="How-to-create-my-own-website"><a href="#How-to-create-my-own-website" class="headerlink" title="How to create my own website"></a>How to create my own website</h3><p>I created my own website named <a href="http://www.bobyuan.com" target="_blank" rel="noopener">bobyuan.com</a>, which cannot been used yet and i will test it in the following days. I will now record the steps of creating the website here.</p>
+<p>First create the own blog using texo or whatever you like and linked it with Github. And then you need to buy a domain. I bought it on the <a href=""https://www.alibabacloud.com/zh"">alibabacloud</a>, which is very simple. And after that, you need to create a CNAME document on Github which contains simply the domain name you have registered. For me, mine is “bobyuan.com”. I read some further instruction on ZhiHu, but up till now it is still not connected with my GitHub website yet so i would not write the instruction here. But i do got an official instruction from <a href=""https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site"">GitHub</a>, i may take a look at it when things don’t change tomorrow.</p>
+<h2 id="Statistik-field"><a href="#Statistik-field" class="headerlink" title="Statistik field:"></a>Statistik field:</h2><p>Leider habe ich gar heute gar keine Statistik gelernt, deswegen.. keinen Fortschritt.</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/06/30/daily-review-30-06-2020/">show all >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-daily-review-29-06-2020" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -410,6 +504,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">machinelearning GA Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HTML CSS</a>
               </li>
             
             <div class="clearfix"></div>
