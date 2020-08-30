@@ -150,6 +150,137 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-creating-website-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/30/creating-website-2/">creating website 2</a>
+    </h1>
+  
+
+        
+        <a href="/2020/08/30/creating-website-2/" class="archive-article-date">
+  	<time datetime="2020-08-30T09:54:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Creating-an-HTML-Button-and-define-the-function-of-it-using-JS"><a href="#Creating-an-HTML-Button-and-define-the-function-of-it-using-JS" class="headerlink" title="Creating an HTML Button and define the function of it using JS"></a>Creating an HTML Button and define the function of it using JS</h3><p>HTML code:</p>
+<p>&lt;input type = “button” value = “change” onclick= “dochange()” .&gt;</p>
+<p>Value : the text shown on the button </p>
+<p>Onclick: the event triggered by clicking the button</p>
+<p>JS code:</p>
+<p>function dochange(){</p>
+<p>alert(‘clicked button’)</p>
+<p>}</p>
+<p>HTML and JS work simultaneously.</p>
+<h3 id="Change-the-color-or-text-using-button-with-HTML-CSS-and-JS"><a href="#Change-the-color-or-text-using-button-with-HTML-CSS-and-JS" class="headerlink" title="Change the color or text using button with HTML,CSS and JS"></a>Change the color or text using button with HTML,CSS and JS</h3><h5 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h5><p></div:></p>
+<div id ="d1" 
+
+<p>Goodbye</p>
+<p></div:></p>
+<p>&lt;input type = “button”, value = “change color”, onclick = “changecolor()”:&gt;</p>
+<h5 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h5><p><code>function  changecolor(){</code></p>
+<p><code>var dd = document.getELementById(&quot;d1&quot;);</code></p>
+<p><code>dd.className = &quot;.yellowback&quot;;</code></p>
+<p><code>}</code></p>
+<p><code>function changetext(){</code></p>
+<p><code>var dd = document.getElementById(&quot;d1&quot;)</code></p>
+<p><code>dd.ineerHTML = &quot;willkommen~&quot;;</code></p>
+<p><code>}</code></p>
+<h5 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h5><p>.yellowback{</p>
+<p>Background-color: yellow;</p>
+<p>}</p>
+<h3 id="Draw-the-graphics-using-canvas"><a href="#Draw-the-graphics-using-canvas" class="headerlink" title="Draw the graphics using canvas"></a>Draw the graphics using canvas</h3><h5 id="HTML-1"><a href="#HTML-1" class="headerlink" title="HTML"></a>HTML</h5><p>&lt;canvas id =”d1”)</p>
+<p>&lt;/canvas)</p>
+<h5 id="CSS-1"><a href="#CSS-1" class="headerlink" title="CSS"></a>CSS</h5><p>canvas{</p>
+<p>width: 200px;</p>
+<p>Height:100px;</p>
+<p>border: 1px;</p>
+<p>}</p>
+<h5 id="JS-1"><a href="#JS-1" class="headerlink" title="JS"></a>JS</h5><p><code>function dochange(){</code></p>
+<p><code>Var dd1 = getElementById(&quot;d1&quot;);</code></p>
+<p><code>var cx = dd1.getContext(&quot;2d&quot;);(This builds a 2D space)</code></p>
+<p><code>cx.fillStyle =&quot;blue&quot;;</code></p>
+<p><code>cx.fillRect(10,10,100,100);</code></p>
+<p><code>cx.font = &quot;50px Arial&quot;</code>(remember that cx.font should be set before cx.fillText())</p>
+<p><code>cx.fillText(&quot;Hello&quot;, 10,80);</code></p>
+<p><code>}</code></p>
+<h4 id="Color-Picker-Slider-Input"><a href="#Color-Picker-Slider-Input" class="headerlink" title="Color Picker, Slider Input"></a>Color Picker, Slider Input</h4><h5 id="HTML-2"><a href="#HTML-2" class="headerlink" title="HTML"></a>HTML</h5><p>&lt;input type = “color” value = “#001A57” id = “clr” onchange = “docolor()”)</p>
+<h5 id="JS-2"><a href="#JS-2" class="headerlink" title="JS"></a>JS</h5><p><code>function docolor(){</code></p>
+<p><code>var dd1 = document.getElementById(&quot;d1&quot;);</code></p>
+<p><code>var colorinput = document.getElementById(&quot;clr&quot;);</code></p>
+<p><code>var color = colorinput.value;</code></p>
+<p><code>dd1.style.backgroundcolor = color;</code></p>
+<p><code>}</code></p>
+<h5 id="HTML-3"><a href="#HTML-3" class="headerlink" title="HTML"></a>HTML</h5><p>&lt;input type = “range” min =”10” max =”100” value = “10” id = “sldr” oninput =”dosquare()”)</p>
+<h6 id="JS-3"><a href="#JS-3" class="headerlink" title="JS"></a>JS</h6><p><code>function dosquare(){</code></p>
+<p><code>var dd1  = document.getElementById(&quot;d1&quot;);</code></p>
+<p><code>var sizeinput = document.getElementById(&quot;sldr&quot;);</code></p>
+<p><code>var size =sizeinput.value;</code></p>
+<p><code>var context = d1.getContext(&quot;2d&quot;);</code></p>
+<p><code>ctx.clearRect(0,0,dd1.width,dd1.height);</code>(Clear the old Rect)</p>
+<p><code>context.fillStyle = &quot;yellow&quot;</code>;</p>
+<p><code>context.fillRect(10,10,size,size);</code></p>
+<p><code>}</code></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JS HTML CSS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/08/30/creating-website-2/">show all >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-creating-website-using-html-css-and-js" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1637,88 +1768,6 @@
 
 
   
-    <article id="post-daily-review-01-07-2020" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/01/daily-review-01-07-2020/">daily-review-01-07-2020</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/01/daily-review-01-07-2020/" class="archive-article-date">
-  	<time datetime="2020-07-01T19:29:43.754Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>title: daily review 01.07.2020<br>date: 2020-07-01 21:28:41<br>tags:<br>–</p>
-<h2 id="Informatik"><a href="#Informatik" class="headerlink" title="Informatik"></a>Informatik</h2><p>I watched some FSV video today which is about the DPLL Algotithm. It is related to the AussagenLogik. But what it is all about may need some further study…</p>
-<p>A great news is, with the instruction from Github, i now successfully connect the github website to my own domain! So welcome to bobyuan.com !</p>
-<h2 id="Statistik"><a href="#Statistik" class="headerlink" title="Statistik"></a>Statistik</h2><p>I have learnt some R today, which is mainly about importing data</p>
-<h4 id="Instructions-of-loading-a-data-base-in-R"><a href="#Instructions-of-loading-a-data-base-in-R" class="headerlink" title="Instructions of loading a data base in R:"></a>Instructions of loading a data base in R:</h4><p>library(DBI)</p>
-<p>data &lt;-dbConnect(RMySQL :: MySQL()</p>
-<p>​                    dbname =”hi”</p>
-<p>​                    host =””</p>
-<p>​                    port = “”</p>
-<p>​                    user = “”</p>
-<p>​                 password =””            </p>
-<p>)</p>
-<p>With the code above we will connect with the MySQL database <code>hi</code></p>
-<h4 id="Use-SQL-Befehl-to-make-request-from-the-DataBase"><a href="#Use-SQL-Befehl-to-make-request-from-the-DataBase" class="headerlink" title="Use SQL Befehl to make request from the DataBase"></a>Use SQL Befehl to make request from the DataBase</h4><p>Then use <code>dbListTable()</code> to list all the table from the Database</p>
-<p>​        use <code>dbReadTable(data,&quot;&quot;)</code> to read the table</p>
-<p>To get query , simply use <code>dbGetQuery(data, (SQL BEFEHL))</code>. It was so surprised that i used SQL again after Datenbankstruktur!</p>
-<p>If the data you want has a lot and could not load in one time, you may use <code>dbSendQuery()</code> to send the request and use <code>dbFetch(, n =?)</code> to fetch the data with the n information at one time. When finished, use <code>dbClearResult()</code></p>
-<p>to disconnect the database, use <code>dbDisconnect()</code></p>
-<h4 id="Import-data-from-JSON"><a href="#Import-data-from-JSON" class="headerlink" title="Import data from JSON"></a>Import data from JSON</h4><p>import data from JSON format: fromJSON(“url”)</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/01/daily-review-01-07-2020/">show all >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1837,6 +1886,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">html css js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">JS HTML CSS</a>
               </li>
             
             <div class="clearfix"></div>
