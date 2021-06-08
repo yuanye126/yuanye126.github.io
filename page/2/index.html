@@ -150,6 +150,84 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-daily-review-03-07-2020" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/04/daily-review-03-07-2020/">daily-review-03-07-2020</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/04/daily-review-03-07-2020/" class="archive-article-date">
+  	<time datetime="2020-07-04T09:46:48.911Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>title: daily review 03.07.2020<br>date: 2020-07-04 11:43:01<br>tags:daily review<br>–</p>
+<h1 id="Informatik"><a href="#Informatik" class="headerlink" title="Informatik"></a>Informatik</h1><h3 id="Difference-between-Local-Suche-and-Classic-Suche"><a href="#Difference-between-Local-Suche-and-Classic-Suche" class="headerlink" title="Difference between Local Suche and Classic Suche"></a>Difference between Local Suche and Classic Suche</h3><h5 id="Local-Suche"><a href="#Local-Suche" class="headerlink" title="Local Suche"></a>Local Suche</h5><p>Start Zustand: Nothing, just the initial beginning. For example, An empty board.</p>
+<p>Nachfolgerfunktion:Change the current state, When there is no conficts exist, when yes, deleted the last step(Backtracking) and take the state with the possible state with no conflicts.</p>
+<h5 id="Classic-Suche"><a href="#Classic-Suche" class="headerlink" title="Classic Suche"></a>Classic Suche</h5><p>Start Zustand: The board is already full. Our goal is to change the pieces on the board to make the situation better. For example, if one piece has been moved to meet the requirement, then is the situation better and the “conflicts rate” will minus one</p>
+<p>Nachfolgefunktion: For example, if one piece has been moved to meet the requirement, then is the situation better and the “conflicts rate” will minus one -&gt; Good move! Take it and take this state as the current state and do the iteration.</p>
+<h1 id="Statistik"><a href="#Statistik" class="headerlink" title="Statistik"></a>Statistik</h1><h3 id="Cleaning-Data-using-R"><a href="#Cleaning-Data-using-R" class="headerlink" title="Cleaning Data using R"></a>Cleaning Data using R</h3><p>use <code>glimpse</code> to see have a general overview of the data</p>
+<p>use <code>is.factor()</code> and similar method to see if it is the type we wish.</p>
+<p>If not we may use <code>as.factor()</code> or similar method to change the type to our desired types</p>
+<p>Bemerkung:</p>
+<p>When converting Factor to a Numeric value, we may first convert it into characters     <code>as.numeric(as.character())</code></p>
+<p>Use <code>assert_all_are_in_past()</code> on Date type to make sure all rides are in the past</p>
+<h5 id="How-to-handle-duplicate-errors"><a href="#How-to-handle-duplicate-errors" class="headerlink" title="How to handle duplicate errors"></a>How to handle duplicate errors</h5><p>use <code>duplicated()</code> to find the duplicated data</p>
+<p>use <code>filter(col, duplicated())</code> to see the duplicated data</p>
+<p>Use <code>distinct(,.keep_all = TRUE)</code> to drop partial duplicates</p>
+<h5 id="Remove-a-col-from-the-dataset"><a href="#Remove-a-col-from-the-dataset" class="headerlink" title="Remove a col from the dataset"></a>Remove a col from the dataset</h5><p>Remove a column: <code>select(-&quot;colomn name&quot;)</code></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/04/daily-review-03-07-2020/">show all >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-daily-review-01-07-2020" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -486,7 +564,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 Ye Yuan
+    		&copy; 2021 Ye Yuan
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -594,6 +672,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">JS HTML CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Logic, Machine Learning</a>
               </li>
             
             <div class="clearfix"></div>
