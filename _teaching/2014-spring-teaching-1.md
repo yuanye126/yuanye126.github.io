@@ -1,14 +1,14 @@
 ---
-title: "Teaching experience 1"
+title: "TA at EMBA TUM"
 collection: teaching
-type: "Undergraduate course"
+type: "MBA course"
 permalink: /teaching/2014-spring-teaching-1
-venue: "University 1, Department"
-date: 2014-01-01
-location: "City, Country"
+venue: "Technical University of Munich"
+date: 2024-12-01
+location: "Munich, Germany"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+Teaching MBA students blockchain and smart contract
 
 Heading 1
 ======
