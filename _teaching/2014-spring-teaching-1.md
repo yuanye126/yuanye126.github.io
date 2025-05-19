@@ -10,11 +10,3 @@ location: "Munich, Germany"
 
 Teaching MBA students blockchain and smart contract
 
-Heading 1
-======
-
-Heading 2
-======
-
-Heading 3
-======
