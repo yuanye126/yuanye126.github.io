@@ -44,6 +44,7 @@ Teaching
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Service and leadership
+Other Roles
 ======
-* Currently signed in to 43 different slack teams
+* Reviewer at [Small Business Economics](https://link.springer.com/journal/11187)
+* Reviewer at [Review of Corporate Finance](https://www.nowpublishers.com/rcf)
