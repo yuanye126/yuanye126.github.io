@@ -1,10 +1,10 @@
 ---
-title: "Cybercrime on the Ethereum blockchain"
+title: "Cybercrime on the ethereum blockchain"
 collection: publications
 category: manuscripts
 permalink: /publication/CybercrimeOnTheEthereumBlockchain
 excerpt: ''
-date: 20250-06-01
+date: 2025-06-01
 venue: 'Journal of Banking and Finance'
 slidesurl: 'http://academicpages.github.io/files/slides2.pdf'
 paperurl: 'https://doi.org/10.1016/j.jbankfin.2025.107419'
