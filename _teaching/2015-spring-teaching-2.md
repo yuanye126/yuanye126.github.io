@@ -10,11 +10,4 @@ date: Wintersemester 2024-2025
 
 Hold the seminar Fintech, teaching students blockchain and smart contract
 
-Heading 1
-======
 
-Heading 2
-======
-
-Heading 3
-======
