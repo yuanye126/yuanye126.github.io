@@ -1,5 +1,5 @@
 ---
-title: "TA at EMBA TUM"
+title: "EMBA TUM"
 collection: teaching
 type: "MBA course"
 permalink: /teaching/2014-spring-teaching-1
