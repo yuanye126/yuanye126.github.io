@@ -14,7 +14,7 @@ author:
   avatar           : "yebild.jpg"
   name             : "Ye Yuan"
   pronouns         : # (optional, e.g., "he/him")
-  bio              : "PhD Candidate at Technical University of Munich | Data Engineer | Blockchain Researcher. Experienced in cloud data engineering, blockchain analytics, and machine learning."
+  bio              : "PhD Candidate | Data Engineer | Blockchain Researcher. Experienced in cloud data engineering, blockchain analytics, and machine learning."
   location         : "Munich, Germany"
   employer         : "Technical University of Munich"
   uri              : # (optional, e.g., your personal website)
@@ -35,7 +35,7 @@ author:
   bitbucket        : 
   codepen          : 
   dribbble         : 
-  github           : "yuanye126"
+  github           : 
   kaggle           : 
   stackoverflow    : 
 
