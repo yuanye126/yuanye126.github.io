@@ -12,7 +12,7 @@ redirect_from:
 
 📽️ I am also a data engineer at [B.i.Team](biteam.de), specializing in Microsoft Copilot, Fabric, and Power BI.
 
-In addtion to that, I am working as CSO at [CNoteS](www.cnoteslab.com), a startup that aims to build the Next Generation Traceable Research Data Platform
+In addtion to that, I am a Co-Founder at [CNoteS](www.cnoteslab.com), a startup that aims to build the Next Generation Traceable Research Data Platform
 
 
 
