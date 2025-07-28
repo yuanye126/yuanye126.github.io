@@ -6,13 +6,15 @@ redirect_from:
   - /about/
   - /about.html
 ---
-👨🏻‍💻I am a phd candidate at [TU Munich](https://www.tum.de/).
 
-🔬My research interests are in digital assets on blockchain, fintech, web3, and machine learning.
+👨🏻‍💻 I am a PhD candidate at <a href="https://www.tum.de/" target="_blank" rel="noopener noreferrer">TU Munich</a>.
 
-📽️ I am also a data engineer at [B.i.Team](biteam.de), specializing in Microsoft Copilot, Fabric, and Power BI.
+🔬 My research interests are in digital assets on blockchain, fintech, web3, and machine learning.
 
-In addtion to that, I am a Co-Founder at [CNoteS](www.cnoteslab.com), a startup that aims to build the Next Generation Traceable Research Data Platform
+📽️ I am also a data engineer at <a href="https://biteam.de" target="_blank" rel="noopener noreferrer">B.i.Team</a>, specializing in Microsoft Copilot, Fabric, and Power BI.
+
+In addition to that, I am a Co-Founder at <a href="https://www.cnoteslab.com" target="_blank" rel="noopener noreferrer">CNoteS</a>, a startup that aims to build the Next Generation Traceable Research Data Platform.
+
 
 
 
