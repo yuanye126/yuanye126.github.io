@@ -1,14 +1,13 @@
 ---
-title: "Cybercrime on the ethereum blockchain"
+title: "Artificial Intelligence and Crowdfunding"
 collection: publications
-category: manuscripts
-permalink: /publication/CybercrimeOnTheEthereumBlockchain
-excerpt: 'We examine how cybercrime impacts victims’ risk-taking and returns. The results from our difference-in-differences analysis of a sample of victim and matched non-victim investors on the Ethereum blockchain are in line with prospect theory and suggest that victims increase their long-term total risk-taking after losing part of their wealth, leading to lower risk-adjusted returns in the post-cybercrime period. Victims’ long-term total risk-taking increases because they increase diversifiable risk due to victims’ post-cybercrime withdrawal from altcoins. At the same time, the reduction in risk-adjusted returns correlates with increased trading activity and churn, due plausibly to managing cybercrime exposure. In the cross-section of Ethereum addresses, we show that the most affluent victims take a systematic approach to restore their pre-cybercrime wealth level, while the least affluent victims turn into gamblers. Finally, a parsimonious forensic model explains a good part of the addresses’ probability of being involved in cybercrime, on both the victim and the cybercriminal side.'
-date: 2025-06-01
-venue: 'Journal of Banking and Finance'
-paperurl: 'https://doi.org/10.1016/j.jbankfin.2025.107419'
-citation: 'Hornuf, L., Momtaz, P. P., Nam, R. J., & Yuan, Y. (2023). Cybercrime on the ethereum blockchain. https://doi.org/
-10.2139/ssrn.4527415'
+category: WorkingPaper
+permalink: /publication/AIandCrowdFunding
+excerpt: >-
+  Information asymmetries shape the (in)efficiency of entrepreneurial finance markets. We introduce a distinction between information-endowment asymmetry (unequal access to signals) and information-utilization asymmetry (unequal processing of signals). Our study explores whether the onset of generative artificial intelligence (AI) improves signal conversion efficiency in entrepreneurial finance; i.e., the effective utilization of the information endowment. Empirically, we engineer an AI agent that utilizes the information endowment in blockchainbased crowdfunding campaigns to generate investment recommendations, and compare those to recommendations by human experts and a human-built recommendation algorithm. Among all major signals of capital formation in blockchain-based crowdfunding, our AI agent's advice outperforms statistically and economically: Including our AI agent's advice as a signal for capital formation raises R-squared by up to 35%, and a one-standard-deviation increase in AI recommendation strength is associated with 48% higher funding amounts. Explainable AI in the form of Shapley values corroborates AI's superior predictive power. Consistent with our signal conversion efficiency conjecture, we also find that AI-human advice congruence is positively associated with capital formation, while AI-human advice divergence predicts lower funding amounts if investment recommendations by humans are more optimistic than those by AI, highlighting the practical potential of AI as a corrective device for human biases in investment decisions.
+date: 2025-12-30
+venue: ""
+paperurl: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5987114"
+citation: "Momtaz, Paul P. and Wiklund, Johan and Yuan, Ye, Artificial Intelligence and Crowdfunding (December 30, 2025). Available at SSRN: https://ssrn.com/abstract=5987114 or http://dx.doi.org/10.2139/ssrn.5987114"
 ---
 
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
