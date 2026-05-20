@@ -1,0 +1,11 @@
+---
+title: "AI in entrepreneurship"
+collection: talks
+type: "Workshop"
+permalink: /talks/ETPWorkshop2025
+venue: "Universiteit van Amsterdam"
+date: 2025-10-09
+location: "Amsterdam, Netherlands"
+---
+[AI in entrepreneurship: ETP-Supported Research Workshop](https://www.aanmelder.nl/aiinentrepreneurship/home)
+Contributed as coauthor to the paper "Artificial intelligence and crowdfunding," presented at the ETP-Supported Research Workshop on AI in Entrepreneurship (Universiteit van Amsterdam); engaged with researchers and practitioners on AI’s role in entrepreneurship.
