@@ -56,6 +56,7 @@ Teaching
   
 Other Roles
 ======
+* Coordinator of [Frontiers in Blockchain](https://www.frontiersin.org/journals/blockchain)
 * Reviewer at [Journal of International Financial Markets, Institutions & Money(JIFMIM)](https://www.sciencedirect.com/journal/journal-of-international-financial-markets-institutions-and-money)
 * Reviewer at [Small Business Economics(SBE)](https://link.springer.com/journal/11187)
 * Reviewer at [Review of Corporate Finance(RCF)](https://www.nowpublishers.com/rcf)
