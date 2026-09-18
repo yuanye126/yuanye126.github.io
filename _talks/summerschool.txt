@@ -1,5 +1,5 @@
 ---
-title: "Entrepreneurial Finance Associations Annual Meeting 2026"
+title: "TUM Summer School 2026"
 collection: talks
 type: "Conference"
 permalink: /talks/summerschool2026
