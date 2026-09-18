@@ -1,0 +1,10 @@
+---
+title: "Advanced Seminar in Fintech: AI agents and blockchain"
+collection: teaching
+type: "Master course"
+permalink: /teaching/Fintech/SS26
+venue: "Technical University of Munich"
+date: 2026-07-31
+location: "Munich, Germany"
+---
+AI agents and blockchain
